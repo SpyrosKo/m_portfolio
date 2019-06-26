@@ -70,7 +70,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 1em;
+    font-size: 2em;
     padding: 1em 0;
     font-weight: 300;
     color: #fff;
@@ -109,7 +109,7 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background: rgba(68, 68, 68, 0.9);
@@ -264,6 +264,9 @@ main {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
+    .menu-nav .nav-link {
+      font-size: 1em;
+      padding: .5em 0; }
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
@@ -287,3 +290,9 @@ main {
       font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
+
+@media screen and (max-height: 400px) {
+  .menu-branding {
+    display: none; }
+  .menu-nav {
+    height: 100vh; } }
