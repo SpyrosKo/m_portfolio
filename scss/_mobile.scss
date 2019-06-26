@@ -19,8 +19,19 @@
         text-align: center; 
 
         .lg-heading {
-            line-height: 1;
-            margin-bottom: 1em;
+            margin:auto;
+            font-size: 5rem;
+          }
+
+        .sm-heading {
+            margin: 1.8em auto;
+            margin-bottom: 5em;
+            line-height: 1.3;        
+        }
+
+        .icons {
+            align-items: center;
+            margin: 0;
         }
     }
 
@@ -75,30 +86,24 @@
 // Smartphones
 @include mediaSm {
     main {
-      padding: 2rem;
       #home h1 {
         margin-top: 10vh;
-      }
-  
-      .lg-heading {
-        margin-top:1rem;
-        font-size: 5rem;
-      }
+      }      
     }
   
     .projects {
       grid-template-columns: 1fr;
     }
-  }
+}
 
-  // Smartphones max-height view
-    @include mediaSmHorizontal {
-        .menu-branding {
-            display: none;
-        }
-
-        .menu-nav {
-            height: 100vh;
-        }
-
+// Smartphones min height view
+@include mediaSmHorizontal {
+    .menu-branding {
+        display: none;
     }
+
+    .menu-nav {
+        height: 100vh;
+    }
+
+}
