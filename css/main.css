@@ -150,7 +150,7 @@ main {
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1em;
-    margin-left: em; }
+    margin-left: 6em; }
     main .icons a {
       padding: .4em; }
       main .icons a:hover {
@@ -223,16 +223,15 @@ main#contact .contact-form {
 
 main#contact .boxes {
   display: block;
-  margin: 2em 0;
-  text-align: center; }
+  text-align: center;
+  width: max-content;
+  margin: 2em auto; }
   main#contact .boxes div {
     font-size: 1.3em;
     transition: all .5s ease-out; }
     main#contact .boxes div:hover {
       background: #eece1a;
-      color: #000;
-      width: max-content;
-      margin: auto; }
+      color: #000; }
       main#contact .boxes div:hover span {
         color: #000; }
 
