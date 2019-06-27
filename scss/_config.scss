@@ -4,6 +4,12 @@ $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
 
+// $primary-color: #444;
+// $secondary-color: #eece1a;
+
+// Powdered Sugar (#F1F4FFFF) and Silver (#A2A2A1FF)
+// Black (#000000FF) and White (#FFFFFFFF)
+
 
 // Set Text Color
 @function set-text-color($color) {

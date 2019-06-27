@@ -141,16 +141,21 @@ main {
 	grid-gap: 1em;
 	margin: 0 2em;
 
-	img {
-		width: 100%;
-		border: #fff 3px solid;
+	.item {
+		
 
-		&:hover {
-			opacity: 0.5;
-			border-color: $secondary-color;
-			@include easeOut;
+		img {
+			width: 100%;
+			border: #fff 3px solid;
+	
+			&:hover {
+				opacity: 0.5;
+				border-color: $secondary-color;
+				@include easeOut;
+			}
 		}
-	}
+
+	}	
 }
 
 // Contact Page
@@ -179,12 +184,14 @@ main {
 				}
 
 				  input[type=submit] {
-					background-color: #4CAF50;
-					color: white;
+					background-color: $secondary-color;
+					color: #000;
 					padding: 12px 20px;
 					border: none;
 					border-radius: 4px;
 					cursor: pointer;
+					font-weight: bold;
+					font-size: 1em;
 				}
 			}
 		}
