@@ -1,7 +1,7 @@
 // Widescreens
 @include mediaXl {
     .projects {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -14,7 +14,7 @@
 
 // Tablets and small Laptops
 @include mediaMd {
-    main {
+    #about {
         align-items: center;
         text-align: center;
 
@@ -25,75 +25,96 @@
 
         .sm-heading {
             margin: 1.8em auto;
-            margin-bottom: 5em;
+            // margin-bottom: 2em;
             line-height: 1.3;
+        }
+
+        .about-info {
+            display: block;
+            grid-template-areas:
+                'bioimage'
+                'bio';
+            grid-template-columns: 1fr;
+            padding-top: 1rem;
+
+            .bio-image {
+                grid-area: bioimage;
+                margin-bottom: 1.5rem;
+            }
+
+            .bio {
+                grid-area: bio;
+                margin: 0 auto;
+                text-align: left;
+            }
         }
 
         .icons {
             align-items: center;
             margin: 0;
         }
-    }
 
-    ul.menu-nav,
-    div.menu-branding {
-        float: left;
-        width: 100%;
-        min-height: 0;
-
-        &.show {
-            transform: translate3d(0, 0, 0);
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    .menu-nav {
-        height: 75vh;
-        transform: translate3d(-100%, 0, 0);
-        font-size: 24px;
+    header {
 
-        .nav-link {
-            font-size: 1em;
-            padding: .5em 0;
+        ul.menu-nav,
+        div.menu-branding {
+            float: left;
+            width: 100%;
+            min-height: 0;
+
+            &.show {
+                transform: translate3d(0, 0, 0);
+            }
         }
-    }
 
-    .menu-branding {
-        height: 25vh;
-        transform: translate3d(100%, 0, 0);
+        .menu-nav {
+            height: 75vh;
+            transform: translate3d(-100%, 0, 0);
+            font-size: 24px;
 
-        .portrait {
-            background: url('../img/sk.png');
-            height: 150px;
-            width: 150px;
+            .nav-link {
+                font-size: 1em;
+                padding: .5em 0;
+            }
         }
-    }
 
-    .about-info {
-        grid-template-areas:
-            'bioimage'
-            'bio'
-            'job1'
-            'job2'
-            'job3';
-        grid-template-columns: 1fr;
-    }
+        .menu-branding {
+            height: 30vh;
+            width: 100px;
+            transform: translate3d(100%, 0, 0);
 
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
+            .portrait {
+                height: 250px;
+                width: 210px;
+                border-top-right-radius: 0;
+            }
+        }
     }
 }
 
 // Smartphones
 @include mediaSm {
-    main {
-        #home h1 {
-            margin-top: 10vh;
+
+    #about {
+        .about-info {
+            
+        .bio {
+            grid-area: bio;
+            margin: 0 1rem;
+            font-size: 1rem;
+            text-align: left
+        }
+        .boxes {
+            padding: 2rem 0;
+        }
         }
     }
-
-    .projects {
-        grid-template-columns: 1fr;
-    }
+    
 }
 
 // Smartphones min height view
