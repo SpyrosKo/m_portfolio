@@ -14,12 +14,12 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
-      background-color: greenyellow;
+      background-color: #fff;
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
-      background-color: blueviolet;
+      background-color: #fff;
       transform: rotate(-45deg) translate(7px, -6px); }
 
 .menu {
@@ -312,6 +312,10 @@ main#contact .boxes {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  header nav .menu-branding {
+    display: none; }
+  header nav .menu-nav {
+    height: 100vh; }
   header ul.menu-nav,
   header div.menu-branding {
     float: left;
