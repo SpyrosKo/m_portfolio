@@ -39,6 +39,20 @@
 // TABLETS / SMALL LAPTOPS
 @include mediaMd {
 
+    // -MENU
+    header {
+        nav {
+            .menu-branding {
+                display: none;
+            }
+
+            .menu-nav {
+                height: 100vh;
+            }
+        }
+    }
+
+
     // HEADER
     header {
 
@@ -187,6 +201,7 @@
         h2 {
             font-size: 1.2rem;
         }
+
         &#contact {
             .contact-form {
                 form {
