@@ -37,7 +37,7 @@
     justify-content: center;
     float: left;
     width: 50%;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden; }
   .menu-nav {
     margin: 0;
@@ -45,6 +45,7 @@
     background: #373737;
     list-style: none;
     transform: translate3d(0, -100%, 0);
+    font-size: 1.2rem;
     transition: all .5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
@@ -297,6 +298,8 @@ main#contact .boxes {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  #home .lg-heading span {
+    font-size: 4rem; }
   #contact .contact-form form input[type=text],
   #contact .contact-form form select,
   #contact .contact-form form textarea {
@@ -312,10 +315,10 @@ main#contact .boxes {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  #home h1.lg-heading {
+    font-size: 4rem; }
   header nav .menu-branding {
     display: none; }
-  header nav .menu-nav {
-    height: 100vh; }
   header ul.menu-nav,
   header div.menu-branding {
     float: left;
@@ -325,9 +328,8 @@ main#contact .boxes {
     header div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   header .menu-nav {
-    height: 75vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
+    font-size: 2.1rem; }
     header .menu-nav .nav-link {
       font-size: 1em;
       padding: .5em 0; }
@@ -380,6 +382,14 @@ main#contact .boxes {
     resize: vertical; } }
 
 @media screen and (max-width: 500px) {
+  #home .lg-heading {
+    font-size: 3rem; }
+  #home .icons {
+    margin: 0;
+    margin-top: 2rem;
+    text-align: center; }
+  #about .lg-heading {
+    font-size: 3rem; }
   #about .about-info .bio {
     grid-area: bio;
     margin: 0 1rem;
@@ -389,8 +399,12 @@ main#contact .boxes {
     padding: 2rem 0; }
   #work .projects {
     grid-template-columns: 1fr; }
-  main h2 {
-    font-size: 1.2rem; }
+  main .lg-heading {
+    font-size: 1.2rem;
+    text-align: center; }
+  main .sm-heading {
+    text-align: center;
+    margin: 0; }
   main#contact .contact-form form input[type=text],
   main#contact .contact-form form select,
   main#contact .contact-form form textarea {
