@@ -11,6 +11,14 @@
 // DESKTOP / LAPTOPS
 @include mediaLg {
 
+    #home {
+        .lg-heading {
+            span {
+                font-size: 4rem;
+            }
+        }
+    }
+
     #contact {
         .contact-form {
             form {
@@ -39,6 +47,13 @@
 // TABLETS / SMALL LAPTOPS
 @include mediaMd {
 
+    
+        #home {
+            h1.lg-heading {
+                font-size: 4rem;
+            }
+        }
+
     // -MENU
     header {
         nav {
@@ -47,7 +62,7 @@
             }
 
             .menu-nav {
-                height: 100vh;
+                // height: 100vh;
             }
         }
     }
@@ -68,9 +83,9 @@
         }
 
         .menu-nav {
-            height: 75vh;
+            // height: 75vh;
             transform: translate3d(-100%, 0, 0);
-            font-size: 24px;
+            font-size: 2.1rem;
 
             .nav-link {
                 font-size: 1em;
@@ -171,8 +186,24 @@
 // SMARTPHONES
 @include mediaSm {
 
+    #home {
+        .lg-heading {
+            font-size: 3rem;
+
+        }
+
+        .icons {
+            margin: 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+
     // ABOUT PAGE
     #about {
+        .lg-heading {
+            font-size: 3rem;
+        }
         .about-info {
             .bio {
                 grid-area: bio;
@@ -198,8 +229,14 @@
 
     // CONTACT
     main {
-        h2 {
+        .lg-heading {
             font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .sm-heading {
+            text-align: center;
+            margin: 0;
         }
 
         &#contact {
