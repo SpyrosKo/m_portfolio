@@ -1,16 +1,17 @@
 // WIDESCREENS
 @include mediaXl {
 
-    // CONTACT PAGE
-
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
+    #work {
+        .projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 // DESKTOP / LAPTOPS
 @include mediaLg {
 
+    //Home - Lg
     #home {
         .lg-heading {
             span {
@@ -19,6 +20,7 @@
         }
     }
 
+    // Contact -Lg
     #contact {
         .contact-form {
             form {
@@ -39,109 +41,20 @@
         }
     }
 
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
+    // Work- Lg
+    #work {
+        .projects {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 // TABLETS / SMALL LAPTOPS
 @include mediaMd {
 
-    
-        #home {
-            h1.lg-heading {
-                font-size: 4rem;
-            }
-        }
-
-    // -MENU
-    header {
-        nav {
-            .menu-branding {
-                display: none;
-            }
-
-            .menu-nav {
-                // height: 100vh;
-            }
-        }
-    }
-
-
-    // HEADER
-    header {
-
-        ul.menu-nav,
-        div.menu-branding {
-            float: left;
-            width: 100%;
-            min-height: 0;
-
-            &.show {
-                transform: translate3d(0, 0, 0);
-            }
-        }
-
-        .menu-nav {
-            // height: 75vh;
-            transform: translate3d(-100%, 0, 0);
-            font-size: 2.1rem;
-
-            .nav-link {
-                font-size: 1em;
-                padding: .5em 0;
-            }
-        }
-
-        .menu-branding {
-            height: 30vh;
-            width: 100px;
-            transform: translate3d(100%, 0, 0);
-
-            .portrait {
-                height: 250px;
-                width: 210px;
-                border-top-right-radius: 0;
-            }
-        }
-    }
-
-    // ABOUT PAGE
-    #about {
-        align-items: center;
-        text-align: center;
-
-        .lg-heading {
-            margin: auto;
-            font-size: 5rem;
-        }
-
-        .sm-heading {
-            margin: 1.8em auto;
-            // margin-bottom: 2em;
-            line-height: 1.3;
-        }
-
-        .about-info {
-            display: block;
-            grid-template-areas:
-                'bioimage'
-                'bio';
-            grid-template-columns: 1fr;
-            padding-top: 1rem;
-
-            .bio-image {
-                grid-area: bioimage;
-                margin-bottom: 1.5rem;
-            }
-
-            .bio {
-                font-size: 1.1rem;
-                grid-area: bio;
-                line-height: 2.1rem;
-                margin: 0 auto;
-                text-align: left;
-            }
+    #home {
+        h1.lg-heading {
+            font-size: 4rem;
         }
 
         .icons {
@@ -150,18 +63,47 @@
         }
     }
 
-    // WORK PAGE
-    #work {
-        .projects {
-            grid-template-columns: repeat(2, 1fr);
+    // ABOUT PAGE - md
+    #about {
+        align-items: center;
+        text-align: center;
 
-            .item {}
+        &.lg-heading {
+            margin: auto;
+            font-size: 5rem;
+        }
+
+        &.sm-heading {
+            margin: 1.8em auto;
+            line-height: 1.3;
+        }
+
+        &.-info {
+            display: block;
+            padding-top: 1rem;
+
+            .bio-image {
+                margin-bottom: 1.5rem;
+            }
+
+            .bio {
+                font-size: 1.1rem;
+                line-height: 2.1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
         }
     }
 
-    // CONTACT
-    main {
-        &#contact {
+    // WORK PAGE - md
+    #work {
+        .projects {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // CONTACT - md    
+        #contact {
             .contact-form {
                 form {
 
@@ -181,15 +123,15 @@
             }
         }
     }
-}
+
 
 // SMARTPHONES
 @include mediaSm {
 
+    // HOME - sm
     #home {
         .lg-heading {
             font-size: 3rem;
-
         }
 
         .icons {
@@ -199,38 +141,31 @@
         }
     }
 
-    // ABOUT PAGE
+    // ABOUT -sm
     #about {
         .lg-heading {
             font-size: 3rem;
         }
+
         .about-info {
             .bio {
-                grid-area: bio;
-                margin: 0 1rem;
                 font-size: 1rem;
-                text-align: left
-            }
-
-            .boxes {
-                padding: 2rem 0;
+                text-align: center
             }
         }
     }
 
-    // WORK PAGE
+    // WORK PAGE -sm
     #work {
         .projects {
             grid-template-columns: 1fr;
-
-            .item {}
         }
     }
 
-    // CONTACT
-    main {
+    // CONTACT - sm
+    #contact {
         .lg-heading {
-            font-size: 1.2rem;
+            font-size: 3rem;
             text-align: center;
         }
 
@@ -239,27 +174,26 @@
             margin: 0;
         }
 
-        &#contact {
-            .contact-form {
-                form {
-
-                    input[type=text],
-                    select,
-                    textarea {
-                        width: 100%;
-                        padding: 12px;
-                        border: 1px solid #ccc;
-                        border-radius: 4px;
-                        box-sizing: border-box;
-                        margin-top: 6px;
-                        margin-bottom: 1.5rem;
-                        resize: vertical;
-                    }
+        // Form - sm
+        .contact-form {
+            form {
+                input[type=text],
+                select,
+                textarea {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-top: 6px;
+                    margin-bottom: 1.5rem;
+                    resize: vertical;
                 }
             }
         }
     }
 }
+
 
 // Smartphones min height view
 @include mediaSmHorizontal {

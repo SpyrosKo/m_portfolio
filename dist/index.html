@@ -3,22 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Spiridon Konofaos - Web Developer and Designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/1cde93e4e0.js"></script>
+    <meta name="description"
+        content="Spiridon Konofaos' front-end web developer / web designer portfolio, landing page, bio biography page with Spiridon Konofaos' name, social links - github and designer name. Tampa.">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147980654-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-147980654-1');
+    </script>
+
+    <!-- fontawesome-free-5.10.2-web -->
+    <link href="/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet">
+    <!--load all styles -->
 </head>
 
 <body id="bg-img">
-    <header>
+
+    <header id="header">
         <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
             <div class="btn-line"></div>
         </div>
+
+        <!-- NAV -->
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
             </div>
             <ul class="menu-nav">
                 <li class="nav-item current">
@@ -45,23 +65,20 @@
         </nav>
     </header>
 
-    <!-- MAIN_____#HOME -->
+    <!--#HOME -->
     <main id="home">
         <h1 class="lg-heading">
             Spiridon<span class="text-secondary"> Konofaos</span>
         </h1>
         <h2 class="sm-heading">
-            Web Developer and Designer
+            UI Front End Web Designer
         </h2>
         <div class="icons">
-            <a href="https://www.linkedin.com/in/spiridon-konofaos-ab188593/">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://github.com/thinnling/">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
+            <img src="fontawesome-free-5.10.2-web/linkedin-in-brands.svg" alt="Linkedin" />
+            <img src='fontawesome-free-5.10.2-web/github-alt-brands.svg' alt="Github" />
         </div>
     </main>
+
 </body>
 <script src="js/main.js"></script>
 

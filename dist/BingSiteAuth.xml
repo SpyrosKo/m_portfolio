@@ -1,4 +1,16 @@
 <?xml version="1.0"?>
 <users>
 	<user>22656B1DD14B8688E73366555DAF2DCC</user>
+	<sitemap>
+		<loc>http://spyrosko.me/about</loc>
+		<lastmod>8/28/2019</lastmod>
+	</sitemap>	
+	<sitemap>
+		<loc>http://spyrosko.me/work</loc>
+		<lastmod>8/28/2019</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>http://spyrosko.me/contact</loc>
+		<lastmod>8/28/2019</lastmod>
+	</sitemap>
 </users>

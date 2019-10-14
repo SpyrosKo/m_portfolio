@@ -1,8 +1,8 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+$primary-color: rgb(94, 94, 94);
+$secondary-color: #bed300;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.7;
 $main-font: rgb(236, 236, 236);
 
 // Set Text Color
@@ -15,7 +15,7 @@ $main-font: rgb(236, 236, 236);
 }
 
 @mixin easeOut {
-	transition: all .5s ease-out;
+	transition: all .25s ease-out;
 }
 
 @mixin background {
