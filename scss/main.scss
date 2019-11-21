@@ -3,61 +3,33 @@
 
 * {
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 //body
 body {
-   @include background;
-   background-color: $primary-color;
-   color: set-text-color($primary-color);
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-size: 62.5%;
-   /* font-size 1em = 10px on default browser settings */
-   ;
+   font-size: 62.5%; // 1em = 10px
    height: 100%;
    margin: 0;
    padding: 0;
-
-   &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background: rgba($primary-color, $background-opacity);
-      z-index: -1;
-   }
 }
 
 // Headings
-h1,
-h2,
-h3 {
-   margin: 0;
-   font-weight: 400;
+// h1,
+// h2,
+// h3 {
+//    margin: 0;
+//    font-weight: 400;
 
-   &.lg-heading {
-      font-size: 6em;
-      line-height: 4rem;
-      margin-left: .5em;
-      padding-top: 7rem;
-      padding-bottom: 1rem;
-   }
 
-   &.sm-heading {
-      margin-bottom: 2em;
-      margin-left: 2em;
-      padding: 0.2em 1em;
-      background: rgba(lighten($primary-color, 2), 0.5);
-   }
-}
+// }
 
 p {
    color: #fff;
    letter-spacing: 1.5px;
    font-size: 1.2rem;
-   ;
 }
 
 a {
@@ -65,17 +37,13 @@ a {
    text-decoration: none;
 }
 
-#header {
+.header {
    position: fixed;
    z-index: 2;
    width: 100%;
 }
 
-.text-secondary {
-   color: $secondary-color;
-   font-size: 2.5rem;
-   padding-bottom: 2rem;
-}
+.text-secondary {}
 
 // Button Styles
 .btn {
@@ -101,144 +69,204 @@ a {
    background: lighten($primary-color, 50);
    color: #333;
 }
+
+// Translucent background opacity
+.first {
+   background-image: url(../img/bg-light.jpg);
+   opacity: 0.2;
+   width: 100%;
+   height: 100vw;
+   background-position: center;
+   background-size: cover;
+   position: fixed;
+}
+
+.second {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
 // HOME
-#home {
-   padding-bottom: 4em;
+.home {
+   display: grid;
+   grid-template-columns: 5rem 60vw 1fr;
+   grid-template-rows: 5rem repeat(4, max-content);
    min-height: calc(100vh - 60px);
-   overflow: hidden;
+
+   &__lg-heading {
+      color: #000;
+      font-size: 2.5rem;
+      grid-column: 2;
+      grid-row: 2;
+   }
+
+   &__sm-heading {
+      color: #000;
+      grid-column: 2;
+      grid-row: 3;
+   }
+
+   &__body-text {
+      color: #000;
+      font-size: 2rem;
+      grid-column: 2/4;
+      grid-row: 4;
+
+   }
+
+   &__contact-cta {
+      background-color: #666;
+      color: #fff;
+      font-size: 1.7rem;
+      grid-column: 2;
+      grid-row: 5;
+      border-radius: 1px;
+      text-transform: uppercase;
+   }
+
+
 
    .icons {
-      margin-top: 1em;
-      margin-left: 6em;
-      display: flex;
-      
-   }
-}
 
-// ABOUT
-#about {
-   h1 {
-      text-align: center;
-   }
-
-   .about-info {
-      display: block;
-      padding-top: 4rem;
-
-      .bio {
-         font-family: $main-font;
-         font-size: 1.1rem;
-         font-weight: 100;
-         letter-spacing: 1px;
-         line-height: 2.2rem;
-         margin: auto;
-         padding-bottom: 1rem;
-         text-align: center;
-         width: 60%;
-         word-spacing: 2px;
-
-         a {
-            color: $secondary-color;
-         }
-      }
-   }
-}
-
-// Work
-#work {
-   .projects {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 2em;
-      margin: 8rem 2em;
-
-      .item {
-         img {
-            width: 100%;
-            border: #fff 3px solid;
-            height: auto;
-
-            &:hover {
-               opacity: 0.5;
-               border-color: $secondary-color;
-               @include easeOut;
-            }
-         }
-      }
-   }
-}
-
-//CONTACT
-#contact {
-   h1 {
-      &.lg-heading {
-         text-align: center;
+      img {
+         margin-right: 1rem;
+         width: 25px;
       }
    }
 
-   h2 {
-      &.sm-heading {
-         margin: auto;
-         margin-bottom: 1.5rem;
-         text-align: center;
-         padding: 1rem;
-         text-transform: uppercase;
-         letter-spacing: 2px;
-         word-spacing: 1.5px;
-         font-weight: 500;
-         width: 45vw;
-      }
-   }
 
-   // Contact Form
-   .contact-form {
-      display: block;
-      width: 40%;
-      min-width: 250px;
-      margin: auto;
-
-      form {
-         form>* {
-            display: block;
-         }
-
-         input[type=text],
-         select,
-         textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-         }
-
-         input[type=submit] {
-            background-color: $secondary-color;
-            color: #000;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1em;
-         }
-      }
-   }
 }
 
+// // ABOUT
+// .about {
+//    h1 {
+//       text-align: center;
+//    }
+
+//    .about-info {
+//       display: block;
+//       padding-top: 4rem;
+
+//       .bio {
+//          font-family: $main-font;
+//          font-size: 1.1rem;
+//          font-weight: 100;
+//          letter-spacing: 1px;
+//          line-height: 2.2rem;
+//          margin: auto;
+//          padding-bottom: 1rem;
+//          text-align: center;
+//          width: 60%;
+//          word-spacing: 2px;
+
+//          a {
+//             color: $secondary-color;
+//          }
+//       }
+//    }
+// }
+
+// // Work
+// .work {
+//    .projects {
+//       display: grid;
+//       grid-template-columns: repeat(3, 1fr);
+//       grid-gap: 2em;
+//       margin: 8rem 2em;
+
+//       .item {
+//          img {
+//             width: 100%;
+//             border: #fff 3px solid;
+//             height: auto;
+
+//             &:hover {
+//                opacity: 0.5;
+//                border-color: $secondary-color;
+//                @include easeOut;
+//             }
+//          }
+//       }
+//    }
+// }
+
+// //CONTACT
+// .contact {
+//    h1 {
+//       &.lg-heading {
+//          text-align: center;
+//       }
+//    }
+
+//    h2 {
+//       &.sm-heading {
+//          margin: auto;
+//          margin-bottom: 1.5rem;
+//          text-align: center;
+//          padding: 1rem;
+//          text-transform: uppercase;
+//          letter-spacing: 2px;
+//          word-spacing: 1.5px;
+//          font-weight: 500;
+//          width: 45vw;
+//       }
+//    }
+
+//    // Contact Form
+//    .contact-form {
+//       display: block;
+//       width: 40%;
+//       min-width: 250px;
+//       margin: auto;
+
+//       form {
+//          form>* {
+//             display: block;
+//          }
+
+//          input[type=text],
+//          select,
+//          textarea {
+//             width: 100%;
+//             padding: 12px;
+//             border: 1px solclass #ccc;
+//             border-radius: 4px;
+//             box-sizing: border-box;
+//             margin-top: 6px;
+//             margin-bottom: 16px;
+//             resize: vertical;
+//          }
+
+//          input[type=submit] {
+//             background-color: $secondary-color;
+//             color: #000;
+//             padding: 12px 20px;
+//             border: none;
+//             border-radius: 4px;
+//             cursor: pointer;
+//             font-weight: bold;
+//             font-size: 1em;
+//          }
+//       }
+//    }
+// }
 
 
-// Main Footer
 
-#main-footer {
-   text-align: center;
-   padding: 1rem;
-   background: darken($primary-color, 10);
-   color: set-text-color($primary-color);
-   height: 60px;
-}
+// // Main Footer
 
-@import '_mobile';
+// #main-footer {
+//    text-align: center;
+//    padding: 1rem;
+//    background: darken($primary-color, 10);
+//    color: set-text-color($primary-color);
+//    height: 60px;
+// }
+
+@import '_mobile-sm';
+@import '_mobile-md';
+@import '_mobile-lg';
+@import '_mobile-xl';

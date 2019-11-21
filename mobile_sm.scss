@@ -1,0 +1,81 @@
+// SMARTPHONES
+@include mediaSm {
+
+   // HOME - sm
+   .home {
+      .lg-heading {
+         font-size: 3rem;
+      }
+
+      .icons {
+         margin: 0;
+         margin-top: 2rem;
+         text-align: center;
+      }
+   }
+
+   // ABOUT -sm
+   .about {
+      .lg-heading {
+         font-size: 3rem;
+      }
+
+      .about-info {
+         .bio {
+            font-size: 1rem;
+            text-align: center
+         }
+      }
+   }
+
+   // WORK PAGE -sm
+   .work {
+      .projects {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   // CONTACT - sm
+   .contact {
+      .lg-heading {
+         font-size: 3rem;
+         text-align: center;
+      }
+
+      .sm-heading {
+         text-align: center;
+         margin: 0;
+      }
+
+      // Form - sm
+      .contact-form {
+         form {
+
+            input[type=text],
+            select,
+            textarea {
+               width: 100%;
+               padding: 12px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               box-sizing: border-box;
+               margin-top: 6px;
+               margin-bottom: 1.5rem;
+               resize: vertical;
+            }
+         }
+      }
+   }
+}
+
+
+// Smartphones min height view
+@include mediaSmHorizontal {
+   .menu-branding {
+      display: none;
+   }
+
+   .menu-nav {
+      height: 100vh;
+   }
+}
