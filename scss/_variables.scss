@@ -1,5 +1,30 @@
+// Gradients
 $hero-gradient:linear-gradient(202.1deg, #93A4FA 14.57%, rgba(108, 39, 39, 0.7) 81.83%);
-
 $pink-gradient: linear-gradient(180deg, #94A4FA 0%, #5E3A3A 100%);
 
-$light-characters: #D5CFDF;
+// Header Sizes
+$font-heading-1: 2.5rem;
+$font-heading-2: 2rem;
+$font-heading-3: 1.5rem;
+$font-heading-4: 1rem;
+
+// Background Colors
+$dark-background: #050517;
+$light-background: #d5ebe4;
+
+// Font Colors
+$dark-font-color: #050517;
+$light-font-color: #72bda3;
+
+$link-color: #be96fd;
+
+$cta: #e5770e;
+$cta-text: #050517;
+
+// Transition
+$transition-hover: all 0.3s;
+
+@font-face {
+   font-family: poppins-regular;
+   src: url(../fonts/poppins/Poppins-Regular.ttf);
+}

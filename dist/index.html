@@ -30,7 +30,7 @@
 <body>
 
 	<div id="container">
-
+		<div id="home"></div>
 		<header class="header ">
 			<!-- Mobile Hamburger Menu -->
 			<div class="menu-mobile">
@@ -42,22 +42,22 @@
 			<nav class="menu">
 				<ul class="menu__nav">
 					<li class="menu__list_item current">
-						<a href="index.html" class="menu__link">
+						<a href="#home" class="menu__link">
 							Home
 						</a>
 					</li>
 					<li class="menu__list_item">
-						<a href="about.html" class="menu__link">
-							About Me
+						<a href="#about" class="menu__link">
+							About
 						</a>
 					</li>
 					<li class="menu__list_item">
-						<a href="work.html" class="menu__link">
+						<a href="#work" class="menu__link">
 							Work
 						</a>
 					</li>
 					<li class="menu__list_item">
-						<a href="contact.html" class="menu__link">
+						<a href="#contact" class="menu__link">
 							Contact
 						</a>
 					</li>
@@ -69,11 +69,12 @@
 			<!-- Hero Section -->
 			<section class="hero">
 				<div class="hero__headings">
+
 					<h1 class="hero__lg-heading">
-						Spiridon Konofaos
+						Front End Web Designer and Developer
 					</h1>
 					<h2 class="hero__sm-heading">
-						Front End Web Designer and Developer
+						Spiridon Konofaos
 					</h2>
 				</div>
 				<div class="hero__description">
@@ -83,50 +84,103 @@
 						more business with
 						elegantly designed sites that function as they should, look amazing, and also have good SEO.
 					</h3>
-					<a class="hero__contact-cta" href="!#">
+					<a class="hero__contact-cta" href="#contact">
 						Contact
 					</a>
 				</div>
 			</section>
+			<!-- Hero End -->
 
-			<div class="below-hero-downstairs-parts"></div>
+
 
 			<!-- About Section -->
-			<div class="about__container">
-				<section class="about">
-					<h1 class="about__lg-heading">
-						What I do and how I do it
-					</h1>
-					<div class="about__bio">
-						<p class="about__para">
-							I make the web accesabile for everyone by creating user friendly and easy to
-							navigate webpages. Join the top rank at the top with great SEO. Functional
-							and
-							attractive.
-						</p>
-						<p class="about__para">If you are ready to see results, please contact me at
-							<a href="mailto: spyros.konofaos1@gmail.coms">
-								spyros.konofaos1@gmail.com
-							</a>
-						</p>
+			<div id="about"></div>
+			<section class="about">
+				<h2 class="about__heading">
+					What I do and how I do it
+				</h2>
+				<div class="about__bio">
+					<p class="about__para">
+						I make the web accesabile for everyone by creating user friendly and easy to
+						navigate webpages. Join the top rank at the top with great SEO. Functional
+						and
+						attractive.
+					</p>
+					<p class="about__para">If you are ready to see results, please contact me at
+						<a href="mailto:spyros.konofaos1@gmail.com">
+							spyros.konofaos1@gmail.com
+						</a>
+					</p>
+				</div>
+			</section>
+
+			<!-- Projects -->
+			<div id="work"></div>
+			<div class="projects__container">
+				<h2 class="work__heading">
+					What I've made recently
+				</h2>
+				<section class="projects">
+					<div class="projects__item">
+						<a href="https://spyrosko.github.io/tribute-fcc/" class="projects__link" target="_blank">
+							<img src="img/projects/tribute-400x239.jpg" alt="History of Nonprofits">
+						</a>
+						<a href="https://spyrosko.github.io/tribute-fcc/" class="projects__project" target="_blank">
+							Project
+						</a>
+						<a href="https://github.com/spyrosko/tribute-fcc/tree/gh-pages" class="projects__github"
+							target="_blank">
+							Github
+						</a>
+					</div>
+
+					<div class="projects__item">
+						<a href="https://spyrosko.github.io/forest/" class="project__link" target="_blank">
+							<img src="img/projects/forest-thumbnail-400x239.jpg" alt="Forest concept piece">
+						</a>
+						<a href="https://spyrosko.github.io/forest/" target="_blank" class="projects__project">
+							Project
+						</a>
+						<a href="https://github.com/spyrosko/forest/tree/master/dist" target="_blank"
+							class="projects__github">
+							Github
+						</a>
+					</div>
+					<div class="projects__item">
+						<a href="https://chingu-voyages.github.io/v13-toucans-team-01/" class="project__link" target="_blank">
+							<img src="img/projects/forest-thumbnail-400x239.jpg" alt="Toucan Bank Investments">
+						</a>
+						<a href="https://chingu-voyages.github.io/v13-toucans-team-01/" target="_blank"
+							class="projects__project">
+							</i>Project
+						</a>
+						<a href="https://github.com/SpyrosKo/Bank_Toucan_Investment_Banking" target="_blank"
+							class="projects__github">
+							Github
+						</a>
 					</div>
 				</section>
 			</div>
+			<!-- Projects End -->
 
 			<!-- Skills I got -->
-			<div class="skills__header">Tools that I use</div>
+			<h2 class="skills__header">
+				Tools that I use
+			</h2>
 			<section class="skills">
 				<div class="skills__name html">
-					<h3>HTML5</h3>
+					<img src="icons/html5/html5-original-wordmark.svg" alt="">
 					<ul>
 						<li>Accessability</li>
+						<li>CSS Grid</li>
+						<li>Flexbox</li>
 						<li>Bootstrap</li>
 						<li>BEM</li>
 					</ul>
 				</div>
 
 				<div class="skills__name css">
-					<h3>CSS3</h3>
+					<img src="icons/css3/css3-original-wordmark.svg" alt="">
 					<ul>
 						<li>Sass</li>
 						<li>Less</li>
@@ -135,7 +189,7 @@
 				</div>
 
 				<div class="skills__name design">
-					<h3>Design</h3>
+					<img src="icons/figma.svg" alt="">
 					<ul>
 						<li>Figma</li>
 						<li>Photoshop</li>
@@ -145,7 +199,7 @@
 				</div>
 
 				<div class="skills__name javascript">
-					<h3>JavaScript</h3>
+					<img src="icons/javascript/javascript-original.svg" alt="">
 					<ul>
 						<li>Vanilla</li>
 						<li>ES6</li>
@@ -155,69 +209,23 @@
 				</div>
 
 				<div class="skills__name git">
-					<h3>Github</h3>
+					<img src="icons/github/github-original-wordmark.svg" alt="">
 					<ul>
 						<li>Git CLI</li>
 						<li>Github Desktop</li>
+						<li>ZenHub</li>
 					</ul>
 				</div>
 			</section>
 
-			<!-- Work Section -->
-			<section class="work">
-				<h2 class="work__heading">
-					What I've made recently
-				</h2>
-			</section>
 
-			<!-- Projects -->
-			<div class="projects__container">
-				<section class="projects">
-					<div class="projects__item">
-						<a href="https://spyrosko.github.io/tribute-fcc/" class="projects__link" target="_blank">
-							<img src="img/projects/tribute-400x239.jpg" alt="History of Nonprofits">
-						</a>
-						<a href="https://spyrosko.github.io/tribute-fcc/" class="projects__project" target="_blank">
-							<i class="fas fa-eye"></i>Project
-						</a>
-						<a href="https://github.com/spyrosko/tribute-fcc/tree/gh-pages" class="projects__github"
-							target="_blank">
-							<i class="fab fa-github"></i>Github
-						</a>
-					</div>
-					<div class="projects__item">
-						<a href="https://spyrosko.github.io/m_portfolio/" class="project__link" target="_blank">
-							<img src="img/projects/portfolio-400x239.jpg" alt="Spiridon Konofaos' Portfolio">
-						</a>
-						<a href="https://spyrosko.github.io/m_portfolio/" target="_blank" class="projects__project">
-							<i class="fas fa-eye"></i>Project
-						</a>
-						<a href="https://github.com/spyrosko/m_portfolio/tree/gh-pages" target="_blank"
-							class="projects__github">
-							<i class="fab fa-github"></i>Github
-						</a>
-					</div>
-					<div class="projects__item">
-						<a href="https://spyrosko.github.io/forest/" class="project__link" target="_blank">
-							<img src="img/projects/forest-thumbnail-400x239.jpg" alt="Forest concept piece">
-						</a>
-						<a href="https://spyrosko.github.io/forest/" target="_blank" class="projects__project">
-							<i class="fas fa-eye"></i>Project
-						</a>
-						<a href="https://github.com/spyrosko/forest/tree/master/dist" target="_blank"
-							class="projects__github">
-							<i class="fab fa-github"></i>Github
-						</a>
-					</div>
-				</section>
-			</div>
-
+			<div id="contact"></div>
 			<!-- Contact Section -->
 			<div class="contact__container">
 				<section class="contact">
-					<h1 class="contact__heading">
+					<h2 class="contact__heading">
 						Contact Me
-					</h1>
+					</h2>
 
 					<!-- Contact Form -->
 					<section class="contact__form">
@@ -245,9 +253,17 @@
 
 		<!-- Footer Section -->
 		<footer class="footer">
+			<div class="footer__copy">
+				&copy;2020 Spiridon Konofaos - Made Completely From Scratch
+			</div>
 			<div class="footer__icons">
-				<img src="icons/github-alt-brands.svg" class="footer__social" style="width: 2.5rem;" alt="Linkedin" />
-				<img src='icons/linkedin-in-brands.svg' class="footer__social" style="width: 2.5rem;" alt="Github" />
+				<a href="https://www.linkedin.com/in/spiridon-konofaos-ab188593/" class="icon__links">
+					<img src='icons/linkedin-in-brands.svg' class="footer__social" style="width: 2.5rem;" alt="Linkdin" />
+				</a>
+
+				<a href="https://github.com/SpyrosKo" class="icon-links">
+					<img src="icons/github-alt-brands.svg" class="footer__social" style="width: 2.5rem;" alt="Github" />
+				</a>
 			</div>
 		</footer>
 
