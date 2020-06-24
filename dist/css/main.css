@@ -194,15 +194,15 @@ header .menu__nav li {
   width: 100%;
 }
 
-.projects__container .projects .projects__item a:hover {
+.projects__container .projects .projects__item .projects__project {
+  border-left: 1px solid #050517;
+}
+
+.projects__container .projects .projects__item .projects__project:hover {
   background: #72bda3;
   color: #050517;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.projects__container .projects .projects__item .projects__project {
-  border-left: 1px solid #050517;
 }
 
 .projects__container .projects .projects__item .projects__github {
@@ -210,10 +210,21 @@ header .menu__nav li {
   border-left: 1px solid #050517;
 }
 
+.projects__container .projects .projects__item .projects__github:hover {
+  background: #72bda3;
+  color: #050517;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .projects__container .projects .projects__item .projects__link img {
   display: block;
   height: auto;
   width: 100%;
+}
+
+.projects__container .projects .projects__item .projects__link:hover {
+  background: black;
 }
 
 .about {
@@ -333,7 +344,7 @@ header .menu__nav li {
 .contact__container input {
   background: #d5ebe4;
   font-size: 1.3rem;
-  padding: 1rem;
+  padding: 0.4rem;
 }
 
 .contact__container input::-webkit-input-placeholder {
@@ -368,7 +379,7 @@ header .menu__nav li {
   text-align: center;
 }
 
-.contact__container .contact__form .contact__details {
+.contact__container .contact .contact__form .contact__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,9 +387,12 @@ header .menu__nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact__container .contact__form .contact__textarea {
+.contact__container .contact .contact__form .contact__textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,18 +401,19 @@ header .menu__nav li {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 1.3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact__container .contact__form .contact__textarea .subject {
+.contact__container .contact .contact__form .contact__textarea .subject {
+  background: #d5ebe4;
   font-size: 1.5rem;
   padding: 1rem;
+  max-width: 400px;
 }
 
-.contact__container .contact__form .contact__textarea .subject {
-  background: #d5ebe4;
-}
-
-.contact__container .contact__form .contact__textarea .contact__submit {
+.contact__container .contact .contact__form .contact__textarea .contact__submit {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -417,7 +432,7 @@ header .menu__nav li {
   border: 1px solid #e5770e;
 }
 
-.contact__container .contact__form .contact__textarea .contact__submit:hover {
+.contact__container .contact .contact__form .contact__textarea .contact__submit:hover {
   background: #d5ebe4;
   border: 1px solid #e5770e;
   color: #552c05;
@@ -456,5 +471,9 @@ header .menu__nav li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.credit-1623 {
+  margin: auto;
 }
 /*# sourceMappingURL=main.css.map */

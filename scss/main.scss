@@ -168,6 +168,10 @@ header {
             padding: 0.5rem;
             text-transform: uppercase;
             width: 100%;
+         }
+
+         .projects__project {
+            border-left: 1px solid $dark-font-color;
 
             &:hover {
                background: $light-font-color;
@@ -176,13 +180,15 @@ header {
             }
          }
 
-         .projects__project {
-            border-left: 1px solid $dark-font-color;
-         }
-
          .projects__github {
             border-bottom: 1px solid $dark-font-color;
             border-left: 1px solid $dark-font-color;
+
+            &:hover {
+               background: $light-font-color;
+               color: $dark-font-color;
+               transition: $transition-hover;
+            }
          }
 
          .projects__link {
@@ -190,6 +196,10 @@ header {
                display: block;
                height: auto;
                width: 100%;
+            }
+
+            &:hover {
+               background: darken($dark-font-color, 10%);
             }
          }
       }
@@ -302,6 +312,7 @@ header {
    padding: 3rem;
    width: 500px;
 
+
    label {
       font-size: $font-heading-3;
       padding-left: 1rem;
@@ -310,7 +321,7 @@ header {
    input {
       background: $light-background;
       font-size: 1.3rem;
-      padding: 1rem;
+      padding: 0.4rem;
 
       &::placeholder {
          padding-left: 0.5rem;
@@ -325,24 +336,25 @@ header {
          text-align: center;
       }
 
-      &__form {
+      .contact__form {
          .contact__details {
             display: flex;
             flex-direction: column;
+            align-items: center;
          }
 
          .contact__textarea {
             display: flex;
             flex-direction: column;
             font-size: 1.3rem;
-
-            .subject {
-               font-size: 1.5rem;
-               padding: 1rem;
-            }
+            align-items: center;
 
             .subject {
                background: $light-background;
+               font-size: 1.5rem;
+               padding: 1rem;
+               max-width: 400px;
+
             }
 
             .contact__submit {
@@ -396,4 +408,9 @@ header {
       color: $light-font-color;
       align-self: center;
    }
+}
+
+
+.credit-1623 {
+   margin: auto;
 }
