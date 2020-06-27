@@ -25,6 +25,7 @@
 		gtag('config', 'UA-147980654-1');
 	</script>
 
+
 </head>
 
 <body>
@@ -41,8 +42,8 @@
 			<!-- Navigation -->
 			<nav class="menu">
 				<ul class="menu__nav">
-					<li class="menu__list_item current">
-						<a href="#home" class="menu__link">
+					<li class="menu__list_item active">
+						<a href="#home" class="menu__link active">
 							Home
 						</a>
 					</li>
@@ -101,7 +102,7 @@
 				</h2>
 				<div class="about__bio">
 					<p class="about__para">
-						I make the web accesabile for everyone by creating user friendly and easy to
+						I make the web accessible for everyone by creating user friendly and easy to
 						navigate webpages. Join the top rank at the top with great SEO. Functional
 						and
 						attractive.
@@ -171,7 +172,7 @@
 				<div class="skills__name html">
 					<img src="icons/html5/html5-original-wordmark.svg" alt="">
 					<ul>
-						<li>Accessability</li>
+						<li>Accessibility</li>
 						<li>CSS Grid</li>
 						<li>Flexbox</li>
 						<li>Bootstrap</li>
@@ -221,34 +222,30 @@
 
 
 			<!-- Contact Section -->
-			<div class="contact__container">
-				<section class="contact">
+
+			<div class="kwes-form">
+				<form method="POST" action="https://kwes.io/api/foreign/forms/8ojHeAkJUGpyDburrlhR" class="contact">
 					<h2 class="contact__heading">
 						Let's Work Together!
 					</h2>
-					<div class="kwes-form">
-						<form method="POST" action="https://kwes.io/api/foreign/forms/8ojHeAkJUGpyDburrlhR"
-							class="contact__form">
-							<div class="contact__details">
-								<label for="fname">First Name</label>
-								<input type="text" class="fname" name="firstname" placeholder="Last Name">
-								<label for="lname">Last Name</label>
-								<input type="text" class="lname" name="lastname" placeholder="Last Name">
-								<label for="email">Email</label>
-								<input type="text" class="email" name="email" placeholder="Email">
-							</div>
-							<div class="contact__textarea">
-								<label for="subject">Subject</label>
-								<textarea class="subject" name="subject" placeholder="Let me know what you need.."
-									style="height:200px"></textarea>
-
-								<a href="mailto:spyros.konofaos1@gmail.com">
-									<button class="contact__submit" name="submit" type="submit">Contact Me Today!</button>
-								</a>
-							</div>
-						</form>
+					<div class="contact__details">
+						<label for="fname">Full Name</label>
+						<input type="text" class="fname" name="firstname" placeholder="Full Name">
+						<!-- <label for="lname">Last Name</label>
+						<input type="text" class="lname" name="lastname" placeholder="Last Name"> -->
+						<label for="email">Email Address</label>
+						<input type="text" class="email" name="email" placeholder="Email Address">
 					</div>
-				</section>
+					<div class="contact__textarea">
+						<label class="textarea-heading" for="subject">Subject</label>
+						<textarea class="subject" name="subject" placeholder="Let me know what you need.."
+							style="height:200px"></textarea>
+
+						<a href="mailto:spyros.konofaos1@gmail.com" class="submit-container">
+							<button class="contact__submit" name="submit" type="submit">Contact Me Today!</button>
+						</a>
+					</div>
+				</form>
 			</div>
 
 		</main>

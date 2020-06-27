@@ -34,19 +34,29 @@ img {
 }
 
 header {
-  background: #050517;
+  background: #61cfff2e;
 }
 
 header a {
-  color: #a6d5c5;
-  font-weight: 500;
+  color: #050517;
+  font-weight: 700;
 }
 
 header a:hover {
-  color: #daeee7;
-  font-weight: 800;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  color: #111;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #111;
+  text-decoration: underline;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+header .active {
+  color: #111;
+  font-weight: 900 !important;
+  font-size: 1.1rem;
+  text-decoration: initial !important;
+  text-shadow: 1px 1px 1px #111;
 }
 
 header .menu__nav {
@@ -60,7 +70,7 @@ header .menu__nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 5rem;
+  padding-right: 15vw;
 }
 
 header .menu__nav li {
@@ -112,9 +122,7 @@ header .menu__nav li {
 }
 
 .hero__description .hero__contact-cta {
-  background: -webkit-gradient(linear, left top, left bottom, from(#94A4FA), to(#5E3A3A));
-  background: linear-gradient(180deg, #94A4FA 0%, #5E3A3A 100%);
-  background: #e5770e;
+  background: #ffcf00;
   color: #050517;
   display: block;
   font-size: 1.2em;
@@ -130,9 +138,9 @@ header .menu__nav li {
 
 .hero__description .hero__contact-cta:hover {
   background: #050517;
-  color: #e5770e;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  color: #5eb0ff;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .work {
@@ -201,8 +209,8 @@ header .menu__nav li {
 .projects__container .projects .projects__item .projects__project:hover {
   background: #72bda3;
   color: #050517;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .projects__container .projects .projects__item .projects__github {
@@ -213,8 +221,8 @@ header .menu__nav li {
 .projects__container .projects .projects__item .projects__github:hover {
   background: #72bda3;
   color: #050517;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .projects__container .projects .projects__item .projects__link img {
@@ -276,8 +284,8 @@ header .menu__nav li {
 
 .about__bio .about__para a:hover {
   color: #f49e4c;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .skills__header {
@@ -328,58 +336,26 @@ header .menu__nav li {
   padding-bottom: 0.3rem;
 }
 
-.contact__container {
+.kwes-form {
   background: #050517;
+}
+
+.contact {
+  width: 350px;
+  margin: auto;
+  padding: 5rem 0;
+}
+
+.contact__heading {
   color: #72bda3;
-  margin: 5rem auto;
-  padding: 3rem;
-  width: 500px;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  padding: 2rem 0;
+  padding-bottom: 4rem;
+  width: 100%;
 }
 
-.contact__container label {
-  font-size: 1.5rem;
-  padding-left: 1rem;
-}
-
-.contact__container input {
-  background: #d5ebe4;
-  font-size: 1.3rem;
-  padding: 0.4rem;
-}
-
-.contact__container input::-webkit-input-placeholder {
-  padding-left: 0.5rem;
-  align-self: center;
-}
-
-.contact__container input:-ms-input-placeholder {
-  padding-left: 0.5rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.contact__container input::-ms-input-placeholder {
-  padding-left: 0.5rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.contact__container input::placeholder {
-  padding-left: 0.5rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.contact__container .contact__heading {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.contact__container .contact .contact__form .contact__details {
+.contact__details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,62 +363,110 @@ header .menu__nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.contact__container .contact .contact__form .contact__textarea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.contact__details label {
+  color: #72bda3;
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
 }
 
-.contact__container .contact .contact__form .contact__textarea .subject {
-  background: #d5ebe4;
-  font-size: 1.5rem;
-  padding: 1rem;
-  max-width: 400px;
+.contact__details input {
+  margin-bottom: 2.5rem;
+  padding: 0.7rem;
+  width: 350px;
 }
 
-.contact__container .contact .contact__form .contact__textarea .contact__submit {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background: #e5770e;
+.contact__details input::-webkit-input-placeholder {
+  color: #777;
+  font-size: 1rem;
+}
+
+.contact__details input:-ms-input-placeholder {
+  color: #777;
+  font-size: 1rem;
+}
+
+.contact__details input::-ms-input-placeholder {
+  color: #777;
+  font-size: 1rem;
+}
+
+.contact__details input::placeholder {
+  color: #777;
+  font-size: 1rem;
+}
+
+.contact__textarea {
+  color: #72bda3;
+}
+
+.contact__textarea .subject {
+  width: 350px;
+  margin: 0.5rem 0 !important;
+}
+
+.contact__textarea .subject::-webkit-input-placeholder {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contact__textarea .subject:-ms-input-placeholder {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contact__textarea .subject::-ms-input-placeholder {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contact__textarea .subject::placeholder {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.contact__textarea .submit-container {
+  height: 100%;
+}
+
+.contact__textarea .submit-container .contact__submit {
+  border: none;
+  outline: none;
+  background: #ffcf00;
+  color: #050517;
+  cursor: pointer;
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.2em;
   font-weight: 700;
-  margin-top: 2rem;
+  letter-spacing: 3px;
+  margin-top: 1rem;
   padding: 1rem;
+  text-transform: uppercase;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  border-width: 0;
-  border-style: none;
-  border-color: none;
-  border: 1px solid #e5770e;
 }
 
-.contact__container .contact .contact__form .contact__textarea .contact__submit:hover {
-  background: #d5ebe4;
-  border: 1px solid #e5770e;
-  color: #552c05;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.contact__textarea .submit-container .contact__submit:hover {
+  background: #87c5ff;
+  color: black;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.textarea-heading {
+  margin-bottom: 1rem;
+  line-height: 1rem;
+}
+
+textarea:focus {
+  background-color: #d5ebe4 !important;
 }
 
 .footer {
   background: #050517;
-  border-top: 5px solid #050517;
+  background: #d5ebe4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,13 +491,49 @@ header .menu__nav li {
 }
 
 .footer__copy {
-  color: #72bda3;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.credit-1623 {
-  margin: auto;
+input.is-success-110293,
+textarea.is-success-110293,
+select.is-success-110293 {
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  border-left: 1px solid #050517 !important;
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid #050517 !important;
+  border-left: 1px solid #9898e9 !important;
+}
+
+.subject {
+  background-color: white !important;
+  border: none !important;
+  border-bottom: 1px solid #000 !important;
+  border-left: 1px solid white !important;
+}
+
+input:focus,
+.subject:focus,
+.submit {
+  background-color: #fff;
+  border: none !important;
+  border-bottom: 1px solid #000 !important;
+  border-left: 1px solid #000 !important;
+  outline: 1px solid #bdb6b6;
+}
+
+.kw-message-110293.kw-message-info {
+  text-align: center;
+}
+
+.submit-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 /*# sourceMappingURL=main.css.map */
