@@ -1,6 +1,4 @@
 @import '_variables';
-@import '_mixins';
-@import '_menu';
 
 // Global
 * {
@@ -35,17 +33,27 @@ img {
 
 // Header
 header {
-   background: $dark-background;
+   background: $dark-font-color;
 
    a {
-      color: lighten($light-font-color, 15%);
-      font-weight: 500;
+      color: $light-background;
+      font-weight: 700;
 
       &:hover {
-         color: lighten($light-font-color, 30%);
-         font-weight: 800;
+         color: $light-font-color;
+         font-weight: 700;
+         text-shadow: 1px 1px 1px #111;
+         text-decoration: underline;
          transition: $transition-hover;
       }
+   }
+
+   .active {
+      color: $light-font-color;
+      font-weight: 900 !important;
+      font-size: 1.1rem;
+      text-decoration: underline !important;
+      text-shadow: 1px 1px 1px #111;
    }
 
    .menu {
@@ -54,8 +62,7 @@ header {
          display: flex;
          height: 3rem;
          justify-content: flex-end;
-         padding-right: 5rem;
-
+         padding-right: 15vw;
 
          li {
             padding-right: 7rem;
@@ -71,7 +78,7 @@ header {
    background-size: cover;
    color: $dark-font-color;
    display: grid;
-   grid-template-columns: 10rem auto 8rem;
+   grid-template-columns: 15vw auto 8rem;
    padding: 9rem 0;
    padding-top: 7rem;
 
@@ -103,75 +110,73 @@ header {
       }
 
       .hero__contact-cta {
-         background: $pink-gradient;
-         background: $cta;
-         color: $cta-text;
+         background: #f6dc37;
+         color: #050517;
+         background: $cta-text;
+         color: $cta;
          display: block;
-         font-size: 1.2em;
-         font-weight: 700;
+         font-size: 1.6rem;
+         font-weight: 900;
          letter-spacing: 3px;
-         margin-top: 1rem;
-         padding: 1rem;
+         margin-top: 4rem;
+         padding: 0.8rem;
          text-transform: uppercase;
          width: max-content;
 
          &:hover {
             background: $cta-text;
             color: $cta;
+            background: #f6dc37;
+            color: #050517;
             transition: $transition-hover;
          }
       }
    }
 }
 
-// Work
-.work {
-   background: $dark-background;
-   display: grid;
-   grid-template-columns: 10rem auto 10rem;
-}
-
 // Projects
-.projects__container {
+.work {
    background: $light-font-color;
    padding: 5rem 0;
+   padding-bottom: 10rem;
 
-   .work__heading {
+   &__heading {
       color: $dark-font-color;
       font-size: $font-heading-2;
-      grid-column: 2;
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
       padding-bottom: 5rem;
    }
 
-   .projects {
+   &__projects {
       display: grid;
-      grid-gap: 5rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      padding: 0 5rem;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 0 1.5rem;
+      justify-content: center;
 
       .projects__item {
-         background: lighten($dark-background, 80%);
          display: flex;
          flex-direction: column;
          align-items: center;
          text-align: center;
 
          a {
-            background: $dark-background;
             border-bottom: 1px solid $light-font-color;
             color: $light-font-color;
             font-weight: bold;
             font-size: 1.1rem;
-            padding: 0.5rem;
             text-transform: uppercase;
             width: 100%;
          }
 
          .projects__project {
+            background: #050517;
             border-left: 1px solid $dark-font-color;
+            margin: .0.5rem 0;
+            margin-top: 0;
+            padding: 0.4rem;
 
             &:hover {
                background: $light-font-color;
@@ -181,8 +186,11 @@ header {
          }
 
          .projects__github {
+            background: #050517;
             border-bottom: 1px solid $dark-font-color;
             border-left: 1px solid $dark-font-color;
+            padding: 0.4rem;
+
 
             &:hover {
                background: $light-font-color;
@@ -192,6 +200,8 @@ header {
          }
 
          .projects__link {
+            border: 1px solid $dark-font-color;
+
             img {
                display: block;
                height: auto;
@@ -199,7 +209,9 @@ header {
             }
 
             &:hover {
-               background: darken($dark-font-color, 10%);
+               opacity: 1;
+               transition: $transition-hover;
+               transform: scale(1.1);
             }
          }
       }
@@ -275,19 +287,24 @@ header {
    color: $dark-font-color;
    display: grid;
    grid-gap: 1rem;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
    padding: 3rem;
+   padding-bottom: 7rem;
    text-align: center;
-
 
    &__name {
       background: lighten($light-background, 5%);
       box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.1);
-      padding: 1rem 1rem 0 1rem;
       max-width: 200px;
       justify-self: center;
+      margin: 1rem 0;
+      padding: 1rem 0;
+      width: 100% !important;
 
       img {
+         display: block;
+         margin: auto;
+         max-width: 100px;
          width: 100%;
       }
 
@@ -305,93 +322,105 @@ header {
 }
 
 // Contact
-.contact__container {
-   background: $dark-background;
-   color: $light-font-color;
-   margin: 5rem auto;
-   padding: 3rem;
-   width: 500px;
+.kwes-form {
+   background: $dark-font-color;
+}
 
+.contact {
+   width: 350px;
+   margin: auto;
+   padding: 5rem 0;
 
-   label {
-      font-size: $font-heading-3;
-      padding-left: 1rem;
+   &__heading {
+      color: $light-font-color;
+      font-size: $font-heading-2;
+      letter-spacing: 1.5px;
+      padding: 2rem 0;
+      padding-bottom: 4rem;
+      width: 100%;
    }
 
-   input {
-      background: $light-background;
-      font-size: 1.3rem;
-      padding: 0.4rem;
+   &__details {
+      display: flex;
+      flex-direction: column;
 
-      &::placeholder {
-         padding-left: 0.5rem;
-         align-self: center;
-      }
-   }
-
-   .contact {
-      &__heading {
-         font-size: $font-heading-1;
-         margin-bottom: 2rem;
-         text-align: center;
+      label {
+         color: $light-font-color;
+         font-size: 0.9rem;
+         padding-bottom: 0.5rem;
       }
 
-      .contact__form {
-         .contact__details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-         }
+      input {
+         margin-bottom: 2.5rem;
+         padding: 0.7rem;
+         width: 350px;
 
-         .contact__textarea {
-            display: flex;
-            flex-direction: column;
-            font-size: 1.3rem;
-            align-items: center;
-
-            .subject {
-               background: $light-background;
-               font-size: 1.5rem;
-               padding: 1rem;
-               max-width: 400px;
-
-            }
-
-            .contact__submit {
-               align-self: center;
-               background: $cta;
-               display: block;
-               font-size: $font-heading-3;
-               font-weight: 700;
-               margin-top: 2rem;
-               padding: 1rem;
-               width: max-content;
-
-               border-width: 0;
-               border-style: none;
-               border-color: none;
-               border: 1px solid $cta;
-
-
-               &:hover {
-                  background: $light-background;
-                  border: 1px solid $cta;
-                  color: darken($cta, 30%);
-                  transition: $transition-hover;
-               }
-
-            }
+         &::placeholder {
+            color: #777;
+            font-size: 1rem;
          }
       }
    }
+
+   &__textarea {
+      color: $light-font-color;
+
+      .subject {
+         width: 350px;
+         margin: 0.5rem 0 !important;
+
+         &::placeholder {
+            font-size: 1rem;
+            padding: 0.5rem;
+         }
+      }
+
+      .submit-container {
+         height: 100%;
+
+         .contact__submit {
+            border: none;
+            outline: none;
+
+            background: #ffcf00;
+            color: $cta-text;
+            cursor: pointer;
+            display: block;
+            font-size: 1.2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+            padding: 1rem;
+            text-transform: uppercase;
+            width: max-content;
+
+            &:hover {
+               background: #87c5ff;
+               color: darken($cta-text, 20%);
+               transition: $transition-hover;
+            }
+         }
+
+      }
+   }
+}
+
+.textarea-heading {
+   margin-bottom: 1rem;
+   line-height: 1rem;
+}
+
+textarea:focus {
+   background-color: $light-background !important;
 }
 
 //Footer 
 .footer {
    background: $dark-background;
-   border-top: 5px solid $dark-background;
+   background: $light-background;
    display: flex;
    justify-content: space-evenly;
+   padding: 0.5rem 1rem;
 
    &__icons {
       display: flex;
@@ -405,12 +434,52 @@ header {
    }
 
    &__copy {
-      color: $light-font-color;
       align-self: center;
    }
 }
 
-
-.credit-1623 {
-   margin: auto;
+// Overiding Kwes styles
+input.is-success-110293,
+textarea.is-success-110293,
+select.is-success-110293 {
+   border: none !important;
+   border-bottom: 1px solid lighten($dark-font-color, 100%) !important;
+   border-left: 1px solid $dark-background !important;
 }
+
+input {
+   border: none !important;
+   border-bottom: 1px solid $dark-font-color !important;
+   border-left: 1px solid lighten($dark-background, 70%) !important;
+}
+
+.subject {
+   background-color: rgb(255, 255, 255) !important;
+   border: none !important;
+   border-bottom: 1px solid #000 !important;
+   border-left: 1px solid rgb(255, 255, 255) !important;
+}
+
+input:focus,
+.subject:focus,
+.submit {
+   background-color: #fff;
+   border: none !important;
+   border-bottom: 1px solid #000 !important;
+   border-left: 1px solid #000 !important;
+   outline: 1px solid rgb(189,
+         182,
+         182);
+}
+
+.kw-message-110293.kw-message-info {
+   text-align: center;
+}
+
+.submit-container {
+   width: fit-content;
+}
+
+
+@import '_md';
+@import '_sm';

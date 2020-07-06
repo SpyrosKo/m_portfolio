@@ -1,0 +1,28 @@
+@media only screen and (max-width: 400px) {
+
+   .hero {
+      grid-template-columns: 2rem auto 2rem;
+   }
+
+   .hero__headings {
+      text-align: center;
+   }
+
+   .hero__intro {
+      text-align: center;
+   }
+
+   .hero__contact-cta {
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .about {
+      grid-template-columns: 2rem auto 2rem;
+   }
+
+   .skills {
+      grid-template-columns: 1fr;
+   }
+
+}
