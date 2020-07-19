@@ -11,6 +11,8 @@
 body {
    background: $light-background;
    font-family: poppins-regular;
+   overflow-x: hidden;
+
 }
 
 ol {
@@ -57,12 +59,22 @@ header {
    }
 
    .menu {
+      &__myname {
+         color: #d5ebe4;
+         position: absolute;
+         top: 0.8rem;
+         left: 1rem;
+         letter-spacing: 1px;
+         word-spacing: 1.2px;
+         text-transform: uppercase;
+      }
+
       &__nav {
          align-items: center;
          display: flex;
          height: 3rem;
          justify-content: flex-end;
-         padding-right: 15vw;
+         // padding-right: 1rem;
 
          li {
             padding-right: 7rem;
@@ -110,10 +122,8 @@ header {
       }
 
       .hero__contact-cta {
-         background: #f6dc37;
-         color: #050517;
-         background: $cta-text;
-         color: $cta;
+         background-color: #F77F00;
+         color: $cta-text;
          display: block;
          font-size: 1.6rem;
          font-weight: 900;
@@ -124,21 +134,74 @@ header {
          width: max-content;
 
          &:hover {
-            background: $cta-text;
-            color: $cta;
-            background: #f6dc37;
-            color: #050517;
+            background-color: lighten(#F77F00, 10%);
+            color: lighten(#050517, 10%);
             transition: $transition-hover;
+         }
+
+         &:active {
+            background-color: darken(#F77F00, 5%);
          }
       }
    }
 }
 
+
+// About
+.about {
+   background: $dark-background;
+   display: grid;
+   grid-template-columns: 20vw auto 15vw;
+   padding: 15rem 0;
+   text-align: right;
+
+   &__heading {
+      border-bottom: 1.5px solid darken($light-font-color, 30%);
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid darken($light-font-color, 30%);
+      color: $light-font-color;
+      font-size: 2.5rem;
+      grid-column: 2;
+      justify-self: end;
+      text-align: right;
+      text-transform: uppercase;
+   }
+
+   &__bio {
+      grid-column: 2;
+      padding: 3rem 0;
+      padding-bottom: 0;
+
+      .about__para {
+         color: $light-font-color;
+         font-size: 1.05rem;
+         letter-spacing: 0.5px;
+         line-height: 1.8rem;
+         padding-bottom: 1rem;
+
+         a {
+            color: #80abd8;
+            font-size: 1.15rem;
+            font-weight: 700;
+
+            &:hover {
+               color: #f49e4c;
+               transition: $transition-hover;
+            }
+         }
+      }
+   }
+}
+
+// About End
+
+
 // Projects
 .work {
    background: $light-font-color;
-   padding: 5rem 0;
-   padding-bottom: 10rem;
+   padding-top: 13rem;
+   padding-bottom: 15rem;
 
    &__heading {
       color: $dark-font-color;
@@ -220,56 +283,6 @@ header {
 
 // Projects End
 
-// About
-.about {
-   background: $dark-background;
-   color: $font-heading-2;
-   display: grid;
-   grid-template-columns: 20vw auto 15vw;
-   padding: 5rem 0;
-   text-align: right;
-
-   &__heading {
-      border-bottom: 1.5px solid darken($light-font-color, 30%);
-      border-left: none;
-      border-right: none;
-      border-top: 1px solid darken($light-font-color, 30%);
-      color: $light-font-color;
-      font-size: 2.5rem;
-      grid-column: 2;
-      justify-self: end;
-      text-align: right;
-      text-transform: uppercase;
-   }
-
-   &__bio {
-      grid-column: 2;
-      padding: 3rem 0;
-      padding-bottom: 0;
-
-      .about__para {
-         color: $light-font-color;
-         font-size: 1.05rem;
-         letter-spacing: 0.5px;
-         line-height: 1.8rem;
-         padding-bottom: 1rem;
-
-         a {
-            color: #80abd8;
-            font-size: 1.15rem;
-            font-weight: 700;
-
-            &:hover {
-               color: #f49e4c;
-               transition: $transition-hover;
-            }
-         }
-      }
-   }
-}
-
-// About End
-
 // Skills
 .skills__header {
    background: $light-background;
@@ -277,7 +290,7 @@ header {
    font-size: $font-heading-2;
    font-weight: 700;
    padding: 5rem 0;
-   padding-bottom: 2rem;
+   // padding-bottom: 5rem;
    text-align: center;
    text-transform: uppercase;
 }
@@ -289,7 +302,8 @@ header {
    grid-gap: 1rem;
    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
    padding: 3rem;
-   padding-bottom: 7rem;
+   padding-bottom: 10rem;
+   padding-top: 0;
    text-align: center;
 
    &__name {
@@ -322,6 +336,17 @@ header {
 }
 
 // Contact
+
+.contact__heading {
+   background-color: $dark-background;
+   color: $light-font-color;
+   font-size: $font-heading-2;
+   letter-spacing: 1.5px;
+   padding-top: 6rem;
+   text-align: center;
+   width: 100%;
+}
+
 .kwes-form {
    background: $dark-font-color;
 }
@@ -329,16 +354,8 @@ header {
 .contact {
    width: 350px;
    margin: auto;
-   padding: 5rem 0;
-
-   &__heading {
-      color: $light-font-color;
-      font-size: $font-heading-2;
-      letter-spacing: 1.5px;
-      padding: 2rem 0;
-      padding-bottom: 4rem;
-      width: 100%;
-   }
+   padding-bottom: 5rem;
+   padding-top: 5rem;
 
    &__details {
       display: flex;
@@ -381,23 +398,28 @@ header {
          .contact__submit {
             border: none;
             outline: none;
-
             background: #ffcf00;
+            background-color: #F77F00;
             color: $cta-text;
             cursor: pointer;
             display: block;
             font-size: 1.2em;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-top: 1rem;
+            margin-top: 5rem;
             padding: 1rem;
             text-transform: uppercase;
             width: max-content;
 
             &:hover {
                background: #87c5ff;
+               background-color: lighten(#F77F00, 10%);
                color: darken($cta-text, 20%);
                transition: $transition-hover;
+            }
+
+            &:active {
+               background-color: darken(#F77F00, 5%);
             }
          }
 
@@ -420,7 +442,6 @@ textarea:focus {
    background: $light-background;
    display: flex;
    justify-content: space-evenly;
-   padding: 0.5rem 1rem;
 
    &__icons {
       display: flex;

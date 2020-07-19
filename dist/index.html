@@ -6,7 +6,7 @@
 	<title>Spiridon Konofaos - Front End Web Designer and Developer</title>
 	<meta name="viewport" content="width =device-width , initial-scale=1.0">
 	<meta name="description"
-		content="This is Spiridon Konofaos' portfolio. He is a front-end web developer and UI web designer, landing page, bio biography page with Spiridon on Konofaos' name, social links - github and designer name. He lives in Tampa Bay.">
+		content="My name is Spiridon Konofaos and this is my web portfolio. I am a Front End web UI Web Designer and Developer. I make the web accessible to everyone.">
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Font Awesome license#license -->
@@ -41,14 +41,18 @@
 			</div>
 			<!-- Navigation -->
 			<nav class="menu">
+				<li class="menu__myname">
+					Spiridon Konofaos
+				</li>
 				<ul class="menu__nav">
+
 					<li class="menu__list_item active">
 						<a href="#home" class="menu__link active">
 							Home
 						</a>
 					</li>
 					<li class="menu__list_item">
-						<a href="#about" class="menu__link">
+						<a href="#about" class="menu__link contact-link">
 							About
 						</a>
 					</li>
@@ -73,18 +77,19 @@
 
 					<h1 class="hero__lg-heading">
 						Front End Web Designer and Developer
-					</h1>
+						<!-- </h1>
 					<h2 class="hero__sm-heading">
 						Spiridon Konofaos
-					</h2>
+					</h2> -->
 				</div>
 				<div class="hero__description">
-					<h3 class="hero__intro">
-						I make the web accessible for everyone by creating user friendly and easy to
-						navigate webpages.
+					<h2 class="hero__intro">
+						I make the web accessible for everyone by creating user friendly and easy to navigate and accessible
+						websites.
 						<a class="hero__contact-cta" href="#contact">
 							Contact
 						</a>
+					</h2>
 				</div>
 			</section>
 			<!-- Hero End -->
@@ -114,7 +119,7 @@
 			</section>
 
 			<!-- Projects -->
-			<div class="work">
+			<section id="work" class="work">
 				<h2 class="work__heading">
 					What I've made recently
 				</h2>
@@ -159,7 +164,7 @@
 						</a>
 					</div>
 				</section>
-			</div>
+			</section>
 			<!-- Projects End -->
 
 			<!-- Skills I got -->
@@ -212,12 +217,14 @@
 			<!-- Skills End -->
 
 			<!-- Contact Section -->
-
+			<div id="contact"></div>
+			<div id="contact-link"></div>
+			<h2 class="contact__heading">
+				Let's Work Together!
+			</h2>
 			<div class="kwes-form">
 				<form method="POST" action="https://kwes.io/api/foreign/forms/8ojHeAkJUGpyDburrlhR" class="contact">
-					<h2 class="contact__heading">
-						Let's Work Together!
-					</h2>
+
 					<div class="contact__details">
 						<label for="fname">Full Name</label>
 						<input type="text" class="fname" name="firstname" placeholder="Full Name">
@@ -237,7 +244,6 @@
 					</div>
 				</form>
 			</div>
-
 		</main>
 
 		<!-- Footer Section -->
@@ -255,9 +261,6 @@
 				</a>
 			</div>
 		</footer>
-
-
-
 	</div> <!-- end Container-->
 
 	<script src="js/main.js"></script>
