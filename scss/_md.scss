@@ -1,5 +1,51 @@
 @media only screen and (max-width: 800px) {
 
+   // Hamburger Menu
+   .header {
+      // height: 100vh;
+
+      .menu-mobile {
+         display: block;
+         position: absolute;
+
+         right: 2rem;
+         top: 2rem;
+
+         .drawer {}
+      }
+
+      .menu {
+
+         // height: 100vh;
+
+
+         &__nav {
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            // margin-bottom: 5rem;
+
+            li {
+               margin-bottom: 2rem;
+               padding: 0;
+               font-size: 1.2rem;
+            }
+
+            .menu__myname {
+               position: static;
+
+               &::after {
+                  content: 'Portfolio';
+                  display: block;
+                  text-align: center;
+                  font-size: 0.8rem;
+               }
+            }
+         }
+      }
+   }
+
+   // Hero 
    .hero {
       grid-template-columns: 4rem auto 4rem;
       text-align: center;

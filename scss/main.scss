@@ -37,6 +37,10 @@ img {
 header {
    background: $dark-font-color;
 
+   .menu-mobile {
+      display: none;
+   }
+
    a {
       color: $light-background;
       font-weight: 700;
@@ -59,22 +63,23 @@ header {
    }
 
    .menu {
-      &__myname {
-         color: #d5ebe4;
-         position: absolute;
-         top: 0.8rem;
-         left: 1rem;
-         letter-spacing: 1px;
-         word-spacing: 1.2px;
-         text-transform: uppercase;
-      }
-
       &__nav {
          align-items: center;
          display: flex;
          height: 3rem;
          justify-content: flex-end;
          // padding-right: 1rem;
+
+         .menu__myname {
+            color: #d5ebe4;
+            position: absolute;
+            top: 0.8rem;
+            left: 1rem;
+            letter-spacing: 1px;
+            word-spacing: 1.2px;
+            text-transform: uppercase;
+            width: max-content;
+         }
 
          li {
             padding-right: 7rem;
