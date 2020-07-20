@@ -577,11 +577,21 @@ input:focus,
 }
 
 @media only screen and (max-width: 800px) {
+  .header {
+    height: 100vh;
+    position: fixed;
+  }
   .header .menu-mobile {
     display: block;
-    position: absolute;
+  }
+  .header .menu-mobile .drawer {
+    position: fixed;
     right: 2rem;
     top: 2rem;
+  }
+  .header .menu {
+    height: 100vh;
+    background-color: #050517;
   }
   .header .menu__nav {
     -webkit-box-orient: vertical;
@@ -591,7 +601,17 @@ input:focus,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    height: 500px;
+    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 500px;
   }
   .header .menu__nav li {
     margin-bottom: 2rem;

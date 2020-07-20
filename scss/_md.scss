@@ -1,29 +1,38 @@
 @media only screen and (max-width: 800px) {
 
-   // Hamburger Menu
-   .header {
-      // height: 100vh;
 
+   .header {
+      height: 100vh;
+      position: fixed;
+
+      // Drawer Menu
       .menu-mobile {
          display: block;
-         position: absolute;
 
-         right: 2rem;
-         top: 2rem;
-
-         .drawer {}
+         .drawer {
+            position: fixed;
+            right: 2rem;
+            top: 2rem;
+         }
       }
 
       .menu {
 
-         // height: 100vh;
+         height: 100vh;
+         background-color: #050517;
 
 
          &__nav {
             flex-direction: column;
             justify-content: center;
-            height: 100vh;
-            // margin-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            border-radius: 50%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            // background: linear-gradient(yellow, green);
 
             li {
                margin-bottom: 2rem;
