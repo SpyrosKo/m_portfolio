@@ -1,60 +1,43 @@
 @media only screen and (max-width: 800px) {
+   //Responsive Hamburger Sidebar Navigation In Pure JavaScript
 
+   #omega-content {
+      display: none;
+   }
 
-   .header {
-      height: 100vh;
-      position: fixed;
+   #omega-button {
+      float: right;
+      cursor: pointer;
+      height: 2rem;
+      width: 2rem;
+   }
 
-      // Drawer Menu
-      .menu-mobile {
-         display: block;
+   .omega-links {
+      display: block;
+      margin-top: 2em;
+   }
 
-         .drawer {
-            position: fixed;
-            right: 2rem;
-            top: 2rem;
-         }
-      }
+   #omega-button,
+   #omega-sidebar,
+   .omega-activated #omega-overlay {
+      display: block;
+   }
 
-      .menu {
+   #omega-sidebar {
+      background-color: hsla(161, 35%, 88%, 0.92);
+      color: #050517;
+   }
 
-         height: 100vh;
-         background-color: #050517;
+   .omega-activated #omega-sidebar {
+      transform: translateX(0);
+   }
 
-
-         &__nav {
-            flex-direction: column;
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
-            border-radius: 50%;
-            height: 500px;
-            justify-content: center;
-            align-items: center;
-            width: 500px;
-            // background: linear-gradient(yellow, green);
-
-            li {
-               margin-bottom: 2rem;
-               padding: 0;
-               font-size: 1.2rem;
-            }
-
-            .menu__myname {
-               position: static;
-
-               &::after {
-                  content: 'Portfolio';
-                  display: block;
-                  text-align: center;
-                  font-size: 0.8rem;
-               }
-            }
-         }
-      }
+   #omega-sidebar-body nav ul li a {
+      color: #050517;
    }
 
    // Hero 
+
    .hero {
       grid-template-columns: 4rem auto 4rem;
       text-align: center;
