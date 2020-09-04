@@ -22,7 +22,8 @@ You can check out my portfolio and all the projects I've done at https://spirido
 <a href='https://archiveprogram.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'></a> <a href='https://docs.github.com/en/developers'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'></a> 
 <a href='https://github.com/pricing'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='50' height='50'></a>
 <br>
- 🔭 I’m currently working on this page. 
 
-<img src="https://media.giphy.com/media/d8WAMoQdOQ8pHn4o6g/giphy.gif" />
+
+### Examples of work
+<img src="https://media1.giphy.com/media/QZmyVPK3BomdX63yzO/giphy.gif" width="256px"/>
 
