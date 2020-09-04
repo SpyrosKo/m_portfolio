@@ -24,5 +24,5 @@ You can check out my portfolio and all the projects I've done at https://spirido
 <br>
  🔭 I’m currently working on this page. 
 
-
+<img src="https://media.giphy.com/media/d8WAMoQdOQ8pHn4o6g/giphy.gif" />
 
