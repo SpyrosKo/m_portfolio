@@ -12,11 +12,12 @@ You can check out my portfolio and all the projects I've done at https://spirido
 - 🌱 I’m currently learning JavaScript 
 - 🤔 I’m looking for help with your website. 
 - ⚡ Fun fact: I am an avid but average chess player. 
-
+<br><br>
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=SpyrosKo)](https://github.com/anuraghazra/github-readme-stats)
 
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/SpyrosKo)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg' alt='dev' height='40'>](https://dev.to/spyrosko)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/spiridon-konofaos-ab188593//)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg' alt='codepen' height='40'>](https://codepen.io/thinnling-the-scripter)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/icloud.svg' alt='website' height='40'>](https://spiridonko.me/)  
+<br>
 
 <a href='https://archiveprogram.github.com/'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/acbadge.gif' width='40' height='40'></a> <a href='https://docs.github.com/en/developers'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/devbadge.gif' width='40' height='40'></a> <a href='https://github.com/pricing'><img src='https://raw.githubusercontent.com/acervenky/animated-github-badges/master/assets/pro.gif' width='50' height='50'></a>
-
+<br>
  🔭 I’m currently working on this page. 
