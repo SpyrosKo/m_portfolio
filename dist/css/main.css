@@ -475,7 +475,7 @@ header .menu__nav li {
   font-size: 1.2em;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-top: 5rem;
+  margin: 5rem auto;
   padding: 1rem;
   text-transform: uppercase;
   width: -webkit-max-content;

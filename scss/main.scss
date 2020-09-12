@@ -411,7 +411,7 @@ header {
             font-size: 1.2em;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-top: 5rem;
+            margin: 5rem auto;
             padding: 1rem;
             text-transform: uppercase;
             width: max-content;
@@ -464,6 +464,9 @@ textarea:focus {
    }
 }
 
+
+
+
 // Overiding Kwes styles
 input.is-success-110293,
 textarea.is-success-110293,
@@ -506,6 +509,18 @@ input:focus,
    width: fit-content;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+// Mobile Navigation
 #omega {
    padding: 1rem 2rem;
 }
