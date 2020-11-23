@@ -11,8 +11,6 @@
 body {
    background: $light-background;
    font-family: poppins-regular;
-   overflow-x: hidden;
-
 }
 
 ol {
@@ -127,8 +125,8 @@ header {
       }
 
       .hero__contact-cta {
-         background-color: #F77F00;
-         color: $cta-text;
+         background-color: #050517;
+         color: #d5ebe4;
          display: block;
          font-size: 1.6rem;
          font-weight: 900;
@@ -139,13 +137,13 @@ header {
          width: max-content;
 
          &:hover {
-            background-color: lighten(#F77F00, 10%);
-            color: lighten(#050517, 10%);
+            background-color: lighten(#212124, 5%);
+            color: lighten(#72bda3, 10%);
             transition: $transition-hover;
          }
 
          &:active {
-            background-color: darken(#F77F00, 5%);
+            background-color: darken(#050517, 5%);
          }
       }
    }
@@ -403,8 +401,7 @@ header {
          .contact__submit {
             border: none;
             outline: none;
-            background: #ffcf00;
-            background-color: #F77F00;
+            background-color: #d5ebe4;
             color: $cta-text;
             cursor: pointer;
             display: block;
@@ -417,14 +414,13 @@ header {
             width: max-content;
 
             &:hover {
-               background: #87c5ff;
-               background-color: lighten(#F77F00, 10%);
+               background-color: lighten(#72bda3, 10%);
                color: darken($cta-text, 20%);
                transition: $transition-hover;
             }
 
             &:active {
-               background-color: darken(#F77F00, 5%);
+               background-color: darken(#72bda3, 10%);
             }
          }
 
@@ -463,9 +459,6 @@ textarea:focus {
       align-self: center;
    }
 }
-
-
-
 
 // Overiding Kwes styles
 input.is-success-110293,
@@ -508,17 +501,6 @@ input:focus,
 .submit-container {
    width: fit-content;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // Mobile Navigation
 #omega {
@@ -601,30 +583,6 @@ input:focus,
    margin-right: 5px;
    margin-bottom: 4px;
 }
-
-// #omega-sidebar-body nav ul li:first-child:before {
-//    content: "\f015";
-//    font-family: "Font Awesome 5 Free";
-//    font-weight: 900;
-// }
-
-// #omega-sidebar-body nav ul li:nth-child(2):before {
-//    content: "\f15c";
-//    font-family: "Font Awesome 5 Free";
-//    font-weight: 900;
-// }
-
-// #omega-sidebar-body nav ul li:nth-child(3):before {
-//    content: "\f15c";
-//    font-family: "Font Awesome 5 Free";
-//    font-weight: 900;
-// }
-
-// #omega-sidebar-body nav ul li:nth-child(4):before {
-//    content: "\f2bb";
-//    font-family: "Font Awesome 5 Free";
-//    font-weight: 900;
-// }
 
 #omega-sidebar-body nav ul li a {
    display: inline-block;

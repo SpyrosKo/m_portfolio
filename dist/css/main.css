@@ -13,7 +13,6 @@
 body {
   background: #d5ebe4;
   font-family: poppins-regular;
-  overflow-x: hidden;
 }
 
 ol {
@@ -140,8 +139,8 @@ header .menu__nav li {
 }
 
 .hero__description .hero__contact-cta {
-  background-color: #F77F00;
-  color: #050517;
+  background-color: #050517;
+  color: #d5ebe4;
   display: block;
   font-size: 1.6rem;
   font-weight: 900;
@@ -155,14 +154,14 @@ header .menu__nav li {
 }
 
 .hero__description .hero__contact-cta:hover {
-  background-color: #ff982b;
-  color: #0e0e41;
+  background-color: #2d2d31;
+  color: #95cdba;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .hero__description .hero__contact-cta:active {
-  background-color: #de7200;
+  background-color: #000002;
 }
 
 .about {
@@ -467,8 +466,7 @@ header .menu__nav li {
 .contact__textarea .submit-container .contact__submit {
   border: none;
   outline: none;
-  background: #ffcf00;
-  background-color: #F77F00;
+  background-color: #d5ebe4;
   color: #050517;
   cursor: pointer;
   display: block;
@@ -484,15 +482,14 @@ header .menu__nav li {
 }
 
 .contact__textarea .submit-container .contact__submit:hover {
-  background: #87c5ff;
-  background-color: #ff982b;
+  background-color: #95cdba;
   color: black;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .contact__textarea .submit-container .contact__submit:active {
-  background-color: #de7200;
+  background-color: #50ac8c;
 }
 
 .textarea-heading {
