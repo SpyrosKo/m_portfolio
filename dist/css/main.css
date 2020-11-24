@@ -139,7 +139,7 @@ header .menu__nav li {
 }
 
 .hero__description .hero__contact-cta {
-  background-color: #050517;
+  background-color: #9C3116;
   color: #d5ebe4;
   display: block;
   font-size: 1.6rem;
@@ -466,8 +466,8 @@ header .menu__nav li {
 .contact__textarea .submit-container .contact__submit {
   border: none;
   outline: none;
-  background-color: #d5ebe4;
-  color: #050517;
+  background-color: #9C3116;
+  color: #d5ebe4;
   cursor: pointer;
   display: block;
   font-size: 1.2em;
