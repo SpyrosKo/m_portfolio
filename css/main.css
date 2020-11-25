@@ -704,10 +704,6 @@ input:focus,
   margin-bottom: 1em;
 }
 
-.kw-form-wrapper a {
-  opacity: 0;
-}
-
 @media only screen and (max-width: 800px) {
   #omega-content {
     display: none;
@@ -757,7 +753,7 @@ input:focus,
     grid-gap: 2rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    padding: 0 1.5rem;
+    padding: 0 3.5rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -808,7 +804,7 @@ input:focus,
     width: 250px;
   }
   .footer__icons .footer__social {
-    margin-left: 0.25rem;
+    padding-left: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
