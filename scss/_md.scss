@@ -8,7 +8,7 @@
    #omega-button {
       float: right;
       cursor: pointer;
-      height: 2rem;
+      // height: 2rem;
       width: 2rem;
    }
 
@@ -50,7 +50,7 @@
    }
 
    .work {
-      background: $light-font-color;
+      // background: $light-font-color;
       padding: 5rem 0;
       padding-bottom: 10rem;
    }
@@ -63,6 +63,13 @@
       justify-content: center;
    }
 }
+
+#container .about__bio .about__para a {
+   margin-top: 2rem;
+   display: block;
+}
+
+.footer__copy {}
 
 @media only screen and (max-width: 800px) {
    .skills {

@@ -18,11 +18,26 @@
    }
 
    .about {
-      grid-template-columns: 2rem auto 2rem;
+      grid-template-columns: 1rem auto 1rem;
+   }
+
+   .about__bio .about__para a {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
    }
 
    .skills {
       grid-template-columns: 1fr;
+   }
+
+   .contact__details input,
+   .contact__details .subject {
+      width: 250px;
+   }
+
+   .footer__icons .footer__social {
+      margin-left: 0.25rem;
+      // margin: 0 0.25rem;
    }
 
 }
