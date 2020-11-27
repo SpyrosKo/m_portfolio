@@ -1,4 +1,27 @@
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
+   .hero {
+      grid-template-columns: 2rem auto 2rem;
+      text-align: center;
+      margin: 0;
+
+      .hero__contact-cta {
+         margin: auto;
+         margin-top: 4rem;
+      }
+   }
+
+   .work__projects {
+      display: grid;
+      grid-gap: 5rem;
+      grid-template-columns: 1fr;
+      padding: 5rem 3rem;
+      padding-top: 8rem;
+      justify-content: center;
+   }
+}
+
+
+@media only screen and (max-width: 440px) {
 
    .hero {
       grid-template-columns: 2rem auto 2rem;
@@ -26,8 +49,23 @@
       letter-spacing: 1px;
    }
 
+   .work__projects {
+      display: grid;
+      grid-gap: 3.5rem;
+      grid-template-columns: 1fr;
+      padding: 3rem 2rem;
+      padding-bottom: 5rem;
+      padding-top: 6rem;
+      justify-content: center;
+   }
+
    .skills {
       grid-template-columns: 1fr;
+   }
+
+   .contact__heading {
+      padding-left: 1rem;
+      padding-right: 1rem;
    }
 
    .contact__details input,
@@ -37,7 +75,5 @@
 
    .footer__icons .footer__social {
       padding-left: 1rem;
-      // margin: 0 0.25rem;
    }
-
 }
