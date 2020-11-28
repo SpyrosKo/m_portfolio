@@ -1,12 +1,10 @@
 @import '_variables';
 
-
 // Global
 * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-
 }
 
 body {
@@ -35,6 +33,9 @@ img {
 // Header
 header {
    background: $dark-font-color;
+   padding: 0.8rem 1rem;
+   padding-bottom: 1.2rem;
+
 
    .menu-mobile {
       display: none;
@@ -43,13 +44,11 @@ header {
    a {
       color: $light-background;
       transition: $transition-hover;
-      // font-weight: 700;
 
       &:hover {
          color: $light-font-color;
          color: #80abd8;
          color: #fff;
-         // font-weight: 700;
          text-shadow: 1px 1px 1px #111;
          text-decoration: none;
       }
@@ -67,7 +66,6 @@ header {
       &__nav {
          align-items: center;
          display: flex;
-         height: 3rem;
          justify-content: flex-end;
          padding-right: 1rem;
 
@@ -104,10 +102,14 @@ header {
       grid-column: 2;
 
       .hero__lg-heading {
-         padding: 0.4rem 0;
          font-size: $font-heading-1;
          font-weight: 800;
-         text-transform: uppercase;
+         // text-transform: uppercase;
+      }
+
+      .hero__myname {
+         font-family: poppins-light;
+         font-weight: 100;
       }
 
       .hero__sm-heading {
@@ -125,7 +127,6 @@ header {
          padding: 1rem 0;
          font-size: 1.5rem;
          font-weight: 400;
-         // width: 700px;
       }
 
       .hero__contact-cta {
@@ -143,9 +144,7 @@ header {
          width: max-content;
 
          &:hover {
-            // background-color: lighten(#72bda3, 5%);
             background-color: lighten(#9C3116, 7%);
-            // color: lighten(#9C3116, 10%);
             color: #050517;
             color: #fff;
             transition: $transition-hover;
@@ -153,7 +152,6 @@ header {
 
          &:active {
             background-color: darken(#9C3116, 10%);
-            // background-color: #9C3116;
             color: #d5ebe4;
          }
       }
@@ -191,16 +189,17 @@ header {
          color: $light-font-color;
          color: #d5ebe4;
          font-size: 1.05rem;
-         letter-spacing: 0.5px;
-         line-height: 1.8rem;
+         letter-spacing: 1px;
+         line-height: 2rem;
          padding-bottom: 1rem;
+         font-weight: 100;
+         font-family: poppins-light;
 
          a {
             color: #f49e4c;
             font-size: 1.15rem;
             font-weight: 700;
             transition: $transition-hover;
-
 
             &:hover {
                color: #fff;
@@ -279,7 +278,6 @@ header {
             padding: 0.4rem;
             border-radius: 5px;
 
-
             &:hover {
                background: $light-font-color;
                background-color: #d5ebe4;
@@ -308,11 +306,8 @@ header {
    }
 }
 
-// Projects End
-
 // Skills
 .skills__header {
-   color: #050517;
    color: #050517;
    border-bottom: 1px solid rgba(5, 5, 23, 25%);
    border-top: 1px solid rgba(5, 5, 23, 25%);
@@ -327,7 +322,6 @@ header {
    margin: auto;
 
    .skills {
-      border: 1px solid goldenrod;
       background: $light-background;
       color: $dark-font-color;
       display: grid;
@@ -356,20 +350,20 @@ header {
 
          ul {
             align-self: center;
+            margin: 0.75rem 0;
 
             li {
                line-height: 1.2rem;
                padding: 0 0.5rem;
                padding-bottom: 0.3rem;
+               font-weight: 600;
             }
          }
       }
    }
 }
 
-
 // Contact
-
 .contact__heading {
    background-color: $dark-background;
    color: $light-font-color;
@@ -380,7 +374,6 @@ header {
    padding-bottom: 2rem;
    text-align: center;
    width: 100%;
-
 }
 
 .kwes-form {
@@ -393,7 +386,6 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // width: 350px;
 
       label {
          color: $light-font-color;
@@ -408,12 +400,10 @@ header {
          margin-bottom: 1.5rem;
          display: block;
          padding: 0.3rem;
-
          width: 350px;
 
          &::placeholder {
             color: #777;
-            // font-size: 1rem;
          }
       }
 
@@ -439,10 +429,8 @@ header {
          .contact__submit {
             border: none;
             outline: none;
-            // background-color: #9C3116;
             background-color: lighten(#9C3116, 15%);
             border-radius: 5px;
-            // color: #d5ebe4;
             color: #fff;
             cursor: pointer;
             display: block;
@@ -457,17 +445,11 @@ header {
             transition: $transition-hover;
 
             &:hover {
-               // background-color: lighten(#72bda3, 10%);
-               // color: darken(#9C3116, 5%);
                background-color: lighten(#9C3116, 7%);
-               // color: #d5ebe4;
-               // color: #050517;
                color: #fff;
-               // transition: $transition-hover;
             }
 
             &:active {
-               // background-color: lighten(#9C3116, 15%);
                background-color: darken(#9C3116, 10%);
                color: #d5ebe4;
             }
@@ -477,7 +459,6 @@ header {
 }
 
 .textarea-heading {
-   // margin-bottom: 1rem;
    display: block;
    line-height: 1rem;
    font-size: 0.8rem;
@@ -492,23 +473,21 @@ textarea:focus {
    background: $dark-background;
    background: $light-background;
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0.5rem 0;
+
+   &__copy {
+      line-height: 1.5rem;
+   }
 
    &__icons {
       display: flex;
-      justify-content: center;
 
       .footer__social {
-         width: 5rem;
-         font-size: 5rem;
-         margin: 1rem;
+         display: block;
+         margin: 0 0.5rem;
       }
-   }
-
-   &__copy {
-      align-self: center;
-      line-height: 1rem;
-      padding-left: 0.5rem;
    }
 }
 
@@ -555,9 +534,7 @@ input:focus,
 }
 
 // Mobile Navigation
-#omega {
-   padding: 1rem 2rem;
-}
+#omega {}
 
 #omega-button {
    display: none;

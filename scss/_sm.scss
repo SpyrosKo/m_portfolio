@@ -19,7 +19,6 @@
       justify-content: center;
    }
 
-
    .skills__container {
       margin: auto;
 
@@ -37,9 +36,45 @@
          }
       }
    }
+
+   //Responsive Hamburger Sidebar Navigation In Pure JavaScript
+   #omega-content {
+      display: none;
+   }
+
+   #omega-button {
+      float: right;
+      cursor: pointer;
+      background-color: #d5ebe4;
+      color: #050517;
+      width: 2rem;
+      height: 2rem;
+   }
+
+   .omega-links {
+      display: block;
+      margin-top: 2em;
+   }
+
+   #omega-button,
+   #omega-sidebar,
+   .omega-activated #omega-overlay {
+      display: block;
+   }
+
+   #omega-sidebar {
+      background-color: hsla(161, 35%, 88%, 0.92);
+      color: #050517;
+   }
+
+   .omega-activated #omega-sidebar {
+      transform: translateX(0);
+   }
+
+   #omega-sidebar-body nav ul li a {
+      color: #050517;
+   }
 }
-
-
 
 @media (max-width: 400px) {
 
@@ -59,7 +94,6 @@
    .hero__description .hero__intro {
       font-weight: 100;
       line-height: 2.2rem;
-
    }
 
    .about {
@@ -83,7 +117,10 @@
       padding-bottom: 5rem;
       padding-top: 6rem;
       justify-content: space-between;
+      margin: 0 0.75rem;
    }
+
+   .work__projects .projects__item {}
 
    #container .about__bio .about__para a {
       margin-top: 2rem;
@@ -115,7 +152,6 @@
       }
    }
 
-
    .contact__heading {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -131,9 +167,5 @@
       width: 150px;
       font-size: 0.8rem;
       padding: 0.3rem 0.25rem;
-   }
-
-   .footer__icons .footer__social {
-      padding-left: 1rem;
    }
 }
