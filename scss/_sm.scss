@@ -98,6 +98,7 @@
 
    .about {
       grid-template-columns: 1.5rem auto 1.5rem;
+      padding-bottom: 5rem;
    }
 
    .about__bio .about__para a {
@@ -124,7 +125,7 @@
 
    #container .about__bio .about__para a {
       margin-top: 2rem;
-      display: none;
+      // display: none;   
    }
 
    .skills__container {

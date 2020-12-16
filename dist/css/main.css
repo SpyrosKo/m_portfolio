@@ -684,7 +684,6 @@ input:focus,
 }
 
 #omega-sidebar-header {
-  background-image: url(../img/bg.png);
   background-size: cover;
   height: 180px;
 }
@@ -869,6 +868,7 @@ input:focus,
   .about {
     -ms-grid-columns: 1.5rem auto 1.5rem;
         grid-template-columns: 1.5rem auto 1.5rem;
+    padding-bottom: 5rem;
   }
   .about__bio .about__para a {
     font-size: 0.8rem;
@@ -893,7 +893,6 @@ input:focus,
   }
   #container .about__bio .about__para a {
     margin-top: 2rem;
-    display: none;
   }
   .skills__container {
     margin: auto;
