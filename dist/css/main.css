@@ -52,6 +52,7 @@ header a {
   color: #d5ebe4;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  position: relative;
 }
 
 header a:hover {
@@ -60,6 +61,33 @@ header a:hover {
   color: #fff;
   text-shadow: 1px 1px 1px #111;
   text-decoration: none;
+}
+
+header a::after {
+  content: '';
+  background-color: currentColor;
+  position: relative;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  width: 100%;
+}
+
+header a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  width: 100%;
 }
 
 header .active {
@@ -150,6 +178,8 @@ header .menu__nav li {
 .hero__description .hero__contact-cta {
   background-color: #9C3116;
   background-color: #df461f;
+  background-color: #0e0e41;
+  background-color: #4bd;
   border-radius: 5px;
   color: #d5ebe4;
   display: block;
@@ -159,6 +189,8 @@ header .menu__nav li {
   margin-top: 4rem;
   padding: 0.8rem;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -166,14 +198,14 @@ header .menu__nav li {
 
 .hero__description .hero__contact-cta:hover {
   background-color: #bb3b1a;
+  background-color: #0e0e41;
   color: #050517;
   color: #fff;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .hero__description .hero__contact-cta:active {
   background-color: #6f2310;
+  background-color: #4bd;
   color: #d5ebe4;
 }
 
@@ -520,8 +552,12 @@ header .menu__nav li {
   border: none;
   outline: none;
   background-color: #df461f;
+  background-color: #f49e4c;
+  background-color: #e96252;
+  background-color: #d5ebe4;
   border-radius: 5px;
   color: #fff;
+  color: #0e0e41;
   cursor: pointer;
   display: block;
   font-size: 1.2em;
@@ -540,12 +576,16 @@ header .menu__nav li {
 
 .contact__textarea .submit-container .contact__submit:hover {
   background-color: #bb3b1a;
+  background-color: #4bd;
   color: #fff;
+  color: #0e0e41;
 }
 
 .contact__textarea .submit-container .contact__submit:active {
   background-color: #6f2310;
+  background-color: #d5ebe4;
   color: #d5ebe4;
+  color: #0e0e41;
 }
 
 .textarea-heading {

@@ -44,6 +44,7 @@ header {
    a {
       color: $light-background;
       transition: $transition-hover;
+      position: relative;
 
       &:hover {
          color: $light-font-color;
@@ -52,6 +53,26 @@ header {
          text-shadow: 1px 1px 1px #111;
          text-decoration: none;
       }
+   }
+
+   a::after {
+      content: '';
+      background-color: currentColor;
+      position: relative;
+      bottom: 0;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: transform 200ms ease-in;
+      transform: scaleX(0);
+      transform-origin: right;
+      width: 100%;
+   }
+
+   a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      width: 100%;
    }
 
    .active {
@@ -132,8 +153,11 @@ header {
       .hero__contact-cta {
          background-color: #9C3116;
          background-color: lighten(#9C3116, 15%);
+         background-color: lighten($dark-background, 10%);
+         background-color: #4bd;
          border-radius: 5px;
          color: #d5ebe4;
+         // color: #0e0e41;
          display: block;
          font-size: 1.6rem;
          font-weight: 900;
@@ -141,17 +165,19 @@ header {
          margin-top: 4rem;
          padding: 0.8rem;
          text-transform: uppercase;
+         transition: $transition-hover;
          width: max-content;
 
          &:hover {
             background-color: lighten(#9C3116, 7%);
+            background-color: lighten($dark-background, 10%);
             color: #050517;
             color: #fff;
-            transition: $transition-hover;
          }
 
          &:active {
             background-color: darken(#9C3116, 10%);
+            background-color: #4bd;
             color: #d5ebe4;
          }
       }
@@ -430,8 +456,13 @@ header {
             border: none;
             outline: none;
             background-color: lighten(#9C3116, 15%);
+            background-color: #f49e4c;
+            background-color: #e96252;
+            background-color: #d5ebe4;
             border-radius: 5px;
             color: #fff;
+            color: #0e0e41;
+            // color: lighten($dark-background, 10%);
             cursor: pointer;
             display: block;
             font-size: 1.2em;
@@ -446,12 +477,16 @@ header {
 
             &:hover {
                background-color: lighten(#9C3116, 7%);
+               background-color: #4bd;
                color: #fff;
+               color: #0e0e41;
             }
 
             &:active {
                background-color: darken(#9C3116, 10%);
+               background-color: #d5ebe4;
                color: #d5ebe4;
+               color: #0e0e41;
             }
          }
       }

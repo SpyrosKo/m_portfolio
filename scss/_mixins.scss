@@ -1,5 +1,5 @@
 @mixin easeOut {
-   transition: all .15s ease-out;
+   transition: all 150ms ease-out;
 }
 
 @mixin animateNavLinks {}
@@ -16,31 +16,31 @@
 
 // Media Query Mixins
 // @mixin mediaSm {
-   //    @media screen and (max-width : 530px) {
-   //       @content;
-   //    }
-   // }
+//    @media screen and (max-width : 530px) {
+//       @content;
+//    }
+// }
 
-   // @mixin mediaMd {
-   //    @media screen and (max-width : 768px) {
-   //       @content;
-   //    }
-   // }
+// @mixin mediaMd {
+//    @media screen and (max-width : 768px) {
+//       @content;
+//    }
+// }
 
-   // @mixin mediaLg {
-   //    @media screen and (min-width : 769px) and (max-width : 1170px) {
-   //       @content;
-   //    }
-   // }
+// @mixin mediaLg {
+//    @media screen and (min-width : 769px) and (max-width : 1170px) {
+//       @content;
+//    }
+// }
 
-   // @mixin mediaXl {
-   //    @media screen and (min-width : 1171px) {
-   //       @content;
-   //    }
-   // }
+// @mixin mediaXl {
+//    @media screen and (min-width : 1171px) {
+//       @content;
+//    }
+// }
 
-   // @mixin mediaSmHorizontal {
-   //    @media screen and (max-height: 400px) {
-   //       @content;
-   //    }
-   // }
+// @mixin mediaSmHorizontal {
+//    @media screen and (max-height: 400px) {
+//       @content;
+//    }
+// }
