@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
    // Hero 
    .hero {
@@ -9,6 +9,18 @@
       .hero__contact-cta {
          margin-top: 4rem;
       }
+   }
+
+   // About
+
+   .about {
+      grid-template-columns: 5rem auto 1.5rem;
+
+      &__heading {
+         max-width: 395px;
+      }
+
+      &__bio {}
    }
 
    .work {

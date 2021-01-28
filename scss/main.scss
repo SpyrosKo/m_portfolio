@@ -6,6 +6,8 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+
+   word-break: keep-all;
 }
 
 body {
@@ -125,7 +127,8 @@ header {
 
       .hero__lg-heading {
          font-size: $font-heading-1;
-         font-weight: 800;
+         font-weight: 900;
+         text-transform: full-width;
       }
 
       .hero__myname {
@@ -181,7 +184,7 @@ header {
 .about {
    background: $dark-background;
    display: grid;
-   grid-template-columns: 20vw auto 15vw;
+   grid-template-columns: 14vw auto 15vw;
    padding: 7rem 0;
    text-align: right;
 
@@ -219,6 +222,8 @@ header {
             font-size: 1.15rem;
             font-weight: 700;
             transition: $transition-hover;
+            width: max-content;
+            float: right;
 
             &:hover {
                color: #fff;
@@ -327,9 +332,11 @@ header {
 
 // Skills
 .skills__header {
-   color: #050517;
+   background-color: $dark-background;
    border-bottom: 1px solid rgba(5, 5, 23, 25%);
    border-top: 1px solid rgba(5, 5, 23, 25%);
+   color: #050517;
+   color: #fff;
    font-size: 2.5rem;
    font-weight: 700;
    text-align: center;
@@ -339,9 +346,10 @@ header {
 
 .skills__container {
    margin: auto;
+   border-bottom: 3px solid $light-background;
 
    .skills {
-      background: $light-background;
+      background: $dark-background;
       color: $dark-font-color;
       display: grid;
       grid-template-columns: repeat(4, minmax(100px, 200px));
@@ -512,3 +520,4 @@ textarea:focus {
 
 @import '_md';
 @import '_sm';
+@import '_xs';
