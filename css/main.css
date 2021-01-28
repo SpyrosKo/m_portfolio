@@ -152,6 +152,7 @@ input:focus,
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  word-break: keep-all;
 }
 
 body {
@@ -287,7 +288,8 @@ header .menu__nav li {
 
 .hero__headings .hero__lg-heading {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
+  text-transform: full-width;
 }
 
 .hero__headings .hero__myname {
@@ -346,8 +348,8 @@ header .menu__nav li {
   background: #050517;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20vw auto 15vw;
-      grid-template-columns: 20vw auto 15vw;
+  -ms-grid-columns: 14vw auto 15vw;
+      grid-template-columns: 14vw auto 15vw;
   padding: 7rem 0;
   text-align: right;
 }
@@ -392,6 +394,10 @@ header .menu__nav li {
   font-weight: 700;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  float: right;
 }
 
 .about__bio .about__para a:hover {
@@ -511,9 +517,11 @@ header .menu__nav li {
 }
 
 .skills__header {
-  color: #050517;
+  background-color: #050517;
   border-bottom: 1px solid #050517;
   border-top: 1px solid #050517;
+  color: #050517;
+  color: #fff;
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -523,10 +531,11 @@ header .menu__nav li {
 
 .skills__container {
   margin: auto;
+  border-bottom: 3px solid #d5ebe4;
 }
 
 .skills__container .skills {
-  background: #d5ebe4;
+  background: #050517;
   color: #050517;
   display: -ms-grid;
   display: grid;
@@ -752,7 +761,7 @@ textarea:focus {
   margin: 0 0.5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .hero {
     -ms-grid-columns: 4rem auto 4rem;
         grid-template-columns: 4rem auto 4rem;
@@ -761,6 +770,13 @@ textarea:focus {
   }
   .hero .hero__contact-cta {
     margin-top: 4rem;
+  }
+  .about {
+    -ms-grid-columns: 5rem auto 1.5rem;
+        grid-template-columns: 5rem auto 1.5rem;
+  }
+  .about__heading {
+    max-width: 395px;
   }
   .work {
     padding: 5rem 0;
@@ -811,6 +827,21 @@ textarea:focus {
     margin: auto;
     margin-top: 4rem;
   }
+  .about {
+    -ms-grid-columns: 1.5rem auto 1.5rem;
+        grid-template-columns: 1.5rem auto 1.5rem;
+  }
+  .about__heading {
+    max-width: 395px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .about__bio {
+    text-align: left;
+  }
+  .about__bio a {
+    float: left;
+  }
   .work__projects {
     display: -ms-grid;
     display: grid;
@@ -829,6 +860,7 @@ textarea:focus {
   .skills__container .skills {
     height: 100%;
     margin: 0 5vw;
+    grid-gap: 1rem;
     -ms-grid-columns: minmax(100px, 300px);
         grid-template-columns: minmax(100px, 300px);
     -ms-grid-column-align: center;
@@ -877,8 +909,8 @@ textarea:focus {
 
 @media (max-width: 400px) {
   .hero {
-    -ms-grid-columns: 2rem auto 2rem;
-        grid-template-columns: 2rem auto 2rem;
+    -ms-grid-columns: 1rem auto 1rem;
+        grid-template-columns: 1rem auto 1rem;
   }
   .hero__headings {
     text-align: center;
@@ -892,12 +924,14 @@ textarea:focus {
     line-height: 2.2rem;
   }
   .about {
-    -ms-grid-columns: 1.5rem auto 1.5rem;
-        grid-template-columns: 1.5rem auto 1.5rem;
     padding-bottom: 5rem;
   }
+  .about__heading {
+    max-width: 395px;
+    text-align: center;
+  }
   .about__bio .about__para a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 1px;
   }
   .work__heading {
@@ -924,6 +958,7 @@ textarea:focus {
     margin: auto;
   }
   .skills__container .skills {
+    grid-gap: 1rem;
     -ms-grid-columns: minmax(100px, 200px);
         grid-template-columns: minmax(100px, 200px);
     margin: 0 10vw;
@@ -931,18 +966,16 @@ textarea:focus {
         justify-self: center;
   }
   .skills__container .skills__name {
-    padding: 2rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .skills__container .skills__name img {
     display: block;
-    margin-right: 0.25rem;
+    height: 5rem;
   }
   .skills__container .skills__name ul {
     margin-left: 0.25rem;
