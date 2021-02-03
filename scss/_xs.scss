@@ -92,7 +92,9 @@
 
    .contact__details input,
    .contact__details .subject {
-      width: 250px;
+      width: 100%;
+      min-width: 250px;
+      max-width: 250px;
    }
 
    .contact__textarea .submit-container .contact__submit {

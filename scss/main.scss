@@ -1,5 +1,4 @@
 @import '_variables';
-@import 'contact-form';
 
 // Global
 * {
@@ -332,13 +331,12 @@ header {
 
 // Skills
 .skills__header {
-   background-color: $dark-background;
    border-bottom: 1px solid rgba(5, 5, 23, 25%);
    border-top: 1px solid rgba(5, 5, 23, 25%);
    color: #050517;
-   color: #fff;
    font-size: 2.5rem;
    font-weight: 700;
+   margin-bottom: 5rem;
    text-align: center;
    text-transform: uppercase;
    word-spacing: 4px;
@@ -358,7 +356,7 @@ header {
       justify-content: center;
       padding: 5rem 0;
       padding-bottom: 7rem;
-      margin: 0 5vw;
+      // margin: 0 1vw;
 
       &__name {
          background: lighten($light-background, 5%);
@@ -392,9 +390,6 @@ header {
 
 // Contact
 .contact__heading {
-   background-color: $dark-background;
-   color: $light-font-color;
-   color: #d5ebe4;
    font-size: $font-heading-2;
    letter-spacing: 1.5px;
    padding: 4rem 0;
@@ -403,20 +398,21 @@ header {
    width: 100%;
 }
 
-.kwes-form {
-   background: $dark-font-color;
-}
+.kwes-form {}
 
 .contact {
+
    &__details {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 50%;
+      margin: auto;
+      background: #fefefe;
+      padding: 2rem;
 
       label {
-         color: $light-font-color;
-         color: #d5ebe4;
          font-size: 0.7rem;
          padding-bottom: 0.3rem;
          letter-spacing: 1px;
@@ -429,13 +425,13 @@ header {
          padding: 0.3rem;
          width: 350px;
 
-         &::placeholder {
-            color: #777;
-         }
+         &::placeholder {}
       }
 
       .subject {
          width: 350px;
+         max-width: 350px;
+         min-width: 350px;
          margin: 0.5rem 0 !important;
 
          &::placeholder {
@@ -447,8 +443,6 @@ header {
    }
 
    &__textarea {
-      color: $light-font-color;
-      color: #d5ebe4;
 
       .submit-container {
          height: 100%;
@@ -491,21 +485,19 @@ header {
    font-size: 0.8rem;
 }
 
-textarea:focus {
-   background-color: #fff !important;
-}
+textarea:focus {}
 
 //Footer 
 .footer {
    background: $dark-background;
-   background: $light-background;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
-   padding: 0.5rem 0;
+   padding: 0.5rem 3rem;
 
    &__copy {
       line-height: 1.5rem;
+      filter: invert(1);
    }
 
    &__icons {
@@ -514,10 +506,12 @@ textarea:focus {
       .footer__social {
          display: block;
          margin: 0 0.5rem;
+         filter: invert(1);
       }
    }
 }
 
+@import '_contact-form';
 @import '_md';
 @import '_sm';
 @import '_xs';
