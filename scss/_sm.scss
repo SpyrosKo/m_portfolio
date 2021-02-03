@@ -54,10 +54,11 @@
 
       .skills {
          height: 100%;
-         margin: 0 5vw;
+         margin: 0 25vw;
          grid-gap: 1rem;
          grid-template-columns: minmax(100px, 300px);
          justify-self: center;
+         padding: 1rem 0;
 
          &__name {
             flex-direction: row;

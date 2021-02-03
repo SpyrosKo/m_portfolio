@@ -354,8 +354,8 @@ header {
       text-align: center;
       grid-gap: 2rem;
       justify-content: center;
-      padding: 5rem 0;
-      padding-bottom: 7rem;
+      // padding: 5rem 0;
+      // padding-bottom: 7rem;
       // margin: 0 1vw;
 
       &__name {
@@ -408,6 +408,7 @@ header {
       justify-content: center;
       align-items: center;
       width: 50%;
+      max-width: 400px;
       margin: auto;
       background: #fefefe;
       padding: 2rem;
