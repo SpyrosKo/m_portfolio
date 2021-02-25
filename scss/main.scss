@@ -1,4 +1,5 @@
 @import '_variables';
+@import '_menu';
 
 // Global
 * {
@@ -32,15 +33,70 @@ img {
    width: 100%;
 }
 
+h1,
+h2 {
+   font-weight: 900;
+}
+
+// Menu Nav
+
+
+
+
+
+// ********************************************************
 // Header
-header {
+.header {
    background: $dark-font-color;
-   padding: 0.8rem 1rem;
-   padding-bottom: 1.2rem;
+   padding: 1rem 3rem;
 
+   .nav {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
 
-   .menu-mobile {
-      display: none;
+      .logo {
+         img {
+            width: 50px;
+            height: auto;
+            display: block;
+         }
+      }
+
+      .menu {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         // font-family: $poppins-light;
+
+         li {
+            padding: 0 2rem;
+
+            a {
+               font-weight: 100;
+               text-shadow: 1px 1px 1px #111;
+            }
+         }
+      }
+
+      // .buttons {
+      //    display: flex;
+
+      //    .button {
+      //       margin: 0 0.5rem;
+      //       background: $light-background;
+      //       padding: 0 0.5rem;
+      //       font-weight: bold;
+
+      //       a {
+      //          color: $dark-background;
+      //       }
+      //    }
+      // }
+
+      .toggle {
+         display: none;
+      }
    }
 
    a {
@@ -52,7 +108,6 @@ header {
          color: $light-font-color;
          color: #80abd8;
          color: #fff;
-         text-shadow: 1px 1px 1px #111;
          text-decoration: none;
       }
    }
@@ -84,32 +139,8 @@ header {
       text-decoration: underline !important;
       text-shadow: 1px 1px 1px #111;
    }
-
-   .menu {
-      &__nav {
-         align-items: center;
-         display: flex;
-         justify-content: flex-end;
-         padding-right: 1rem;
-
-         .menu__myname {
-            color: #d5ebe4;
-            position: absolute;
-            top: 0.8rem;
-            left: 1rem;
-            letter-spacing: 1px;
-            word-spacing: 1.2px;
-            text-transform: uppercase;
-            width: max-content;
-         }
-
-         li {
-            padding-right: 7rem;
-            width: 10%;
-         }
-      }
-   }
 }
+
 
 // Hero
 .hero {
@@ -149,8 +180,7 @@ header {
       .hero__intro {
          padding: 1rem 0;
          font-size: 1.5rem;
-         font-weight: 400;
-      }
+         font-weight: 400;      }
 
       .hero__contact-cta {
          background-color: $button;
@@ -249,7 +279,6 @@ header {
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
-      font-weight: 900;
       border-bottom: 1px solid rgba(5, 5, 23, 25%);
       border-top: 1px solid rgba(5, 5, 23, 25%);
    }
@@ -330,21 +359,24 @@ header {
 }
 
 // Skills
-.skills__header {
-   border-bottom: 1px solid rgba(5, 5, 23, 25%);
-   border-top: 1px solid rgba(5, 5, 23, 25%);
-   color: #050517;
-   font-size: 2.5rem;
-   font-weight: 700;
-   margin-bottom: 5rem;
-   text-align: center;
-   text-transform: uppercase;
-   word-spacing: 4px;
-}
+
 
 .skills__container {
    margin: auto;
    border-bottom: 3px solid $light-background;
+
+   .skills__header {
+      border-bottom: 1px solid #050517;
+      border-top: 1px solid #050517;
+      color: $light-background;
+      font-size: 2.5rem;
+      /* margin-bottom: 5rem; */
+      text-align: center;
+      text-transform: uppercase;
+      word-spacing: 4px;
+      background-color: #050517;
+      padding: 1rem;
+   }
 
    .skills {
       background: $dark-background;

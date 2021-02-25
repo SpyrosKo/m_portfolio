@@ -1,4 +1,12 @@
 @media (max-width: 600px) {
+
+
+
+
+
+   // *********************************
+
+
    .hero {
       grid-template-columns: 2rem auto 2rem;
       text-align: center;
@@ -73,41 +81,4 @@
       width: 100%;
    }
 
-   //Responsive Hamburger Sidebar Navigation In Pure JavaScript
-   #omega-content {
-      display: none;
-   }
-
-   #omega-button {
-      float: right;
-      cursor: pointer;
-      background-color: #d5ebe4;
-      color: #050517;
-      width: 2rem;
-      height: 2rem;
-   }
-
-   .omega-links {
-      display: block;
-      margin-top: 2em;
-   }
-
-   #omega-button,
-   #omega-sidebar,
-   .omega-activated #omega-overlay {
-      display: block;
-   }
-
-   #omega-sidebar {
-      background-color: hsla(161, 35%, 88%, 0.92);
-      color: #050517;
-   }
-
-   .omega-activated #omega-sidebar {
-      transform: translateX(0);
-   }
-
-   #omega-sidebar-body nav ul li a {
-      color: #050517;
-   }
 }
