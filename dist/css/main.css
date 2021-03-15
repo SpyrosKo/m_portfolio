@@ -46,7 +46,7 @@ h2 {
 
 .header {
   background: #050517;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem 1rem 3rem;
 }
 
 .header .nav {
@@ -225,10 +225,10 @@ h2 {
 }
 
 .about__heading {
-  border-bottom: 1.5px solid #306653;
+  border-bottom: 1.5px solid #72bda3;
   border-left: none;
   border-right: none;
-  border-top: 1px solid #306653;
+  border-top: 1px solid #72bda3;
   color: #72bda3;
   color: #d5ebe4;
   font-size: 2.5rem;
@@ -391,8 +391,6 @@ h2 {
 }
 
 .skills__container .skills__header {
-  border-bottom: 1px solid #050517;
-  border-top: 1px solid #050517;
   color: #d5ebe4;
   font-size: 2.5rem;
   /* margin-bottom: 5rem; */
@@ -401,6 +399,12 @@ h2 {
   word-spacing: 4px;
   background-color: #050517;
   padding: 1rem;
+}
+
+.skills__container .skills__header::before {
+  content: 'What I use ';
+  border-bottom: 1px solid #72bda3;
+  border-top: 1px solid #72bda3;
 }
 
 .skills__container .skills {
@@ -415,6 +419,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 2rem;
 }
 
 .skills__container .skills__name {
@@ -455,10 +460,11 @@ h2 {
 }
 
 .contact__heading {
+  border-bottom: 1px solid #050517;
+  border-top: 1px solid #050517;
   font-size: 2.5rem;
+  margin: 5rem 0;
   letter-spacing: 1.5px;
-  padding: 4rem 0;
-  padding-bottom: 2rem;
   text-align: center;
   width: 100%;
 }

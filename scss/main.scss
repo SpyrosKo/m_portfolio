@@ -48,7 +48,7 @@ h2 {
 // Header
 .header {
    background: $dark-font-color;
-   padding: 1rem 3rem;
+   padding: 1rem 5rem 1rem 3rem;
 
    .nav {
       display: flex;
@@ -180,7 +180,8 @@ h2 {
       .hero__intro {
          padding: 1rem 0;
          font-size: 1.5rem;
-         font-weight: 400;      }
+         font-weight: 400;
+      }
 
       .hero__contact-cta {
          background-color: $button;
@@ -218,10 +219,10 @@ h2 {
    text-align: right;
 
    &__heading {
-      border-bottom: 1.5px solid darken($light-font-color, 30%);
+      border-bottom: 1.5px solid $light-font-color;
       border-left: none;
       border-right: none;
-      border-top: 1px solid darken($light-font-color, 30%);
+      border-top: 1px solid $light-font-color;
       color: $light-font-color;
       color: #d5ebe4;
       font-size: 2.5rem;
@@ -366,8 +367,6 @@ h2 {
    border-bottom: 3px solid $light-background;
 
    .skills__header {
-      border-bottom: 1px solid #050517;
-      border-top: 1px solid #050517;
       color: $light-background;
       font-size: 2.5rem;
       /* margin-bottom: 5rem; */
@@ -376,7 +375,16 @@ h2 {
       word-spacing: 4px;
       background-color: #050517;
       padding: 1rem;
+
+
    }
+
+   .skills__header::before {
+      content: 'What I use ';
+      border-bottom: 1px solid $light-font-color;
+      border-top: 1px solid $light-font-color;
+   }
+
 
    .skills {
       background: $dark-background;
@@ -386,9 +394,7 @@ h2 {
       text-align: center;
       grid-gap: 2rem;
       justify-content: center;
-      // padding: 5rem 0;
-      // padding-bottom: 7rem;
-      // margin: 0 1vw;
+      padding: 2rem;
 
       &__name {
          background: lighten($light-background, 5%);
@@ -422,10 +428,11 @@ h2 {
 
 // Contact
 .contact__heading {
+   border-bottom: 1px solid $dark-font-color;
+   border-top: 1px solid $dark-font-color;
    font-size: $font-heading-2;
+   margin: 5rem 0;
    letter-spacing: 1.5px;
-   padding: 4rem 0;
-   padding-bottom: 2rem;
    text-align: center;
    width: 100%;
 }
