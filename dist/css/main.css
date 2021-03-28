@@ -8,6 +8,11 @@
   src: url(../fonts/poppins/Poppins-Light.ttf);
 }
 
+@font-face {
+  font-family: barlow-black;
+  src: url(../fonts/Barlow/Barlow-Black.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -46,6 +51,7 @@ h2 {
 
 .header {
   background: #050517;
+  font-family: barlow-black;
   padding: 1rem 5rem 1rem 3rem;
 }
 
@@ -79,6 +85,7 @@ h2 {
 
 .header .nav .menu li {
   padding: 0 2rem;
+  letter-spacing: 1pxs;
 }
 
 .header .nav .menu li a {
@@ -323,6 +330,13 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.work__projects .projects__item .link {
+  width: 100%;
+  height: 40px;
+  background-color: #9bb2d3;
+  border: 1px solid #e4e4e4;
 }
 
 .work__projects .projects__item a {
