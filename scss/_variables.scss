@@ -2,11 +2,15 @@
 $hero-gradient:linear-gradient(202.1deg, #93A4FA 14.57%, rgba(108, 39, 39, 0.7) 81.83%);
 $pink-gradient: linear-gradient(180deg, #94A4FA 0%, #5E3A3A 100%);
 
-// Header Sizes
-$font-heading-1: 2.5rem;
-$font-heading-2: 2.5rem;
-$font-heading-3: 1.5rem;
-$font-heading-4: 1rem;
+// Header and paragraph Sizes
+$font-heading-1: 54px;
+$font-heading-2: 42px;
+$font-heading-3: 33px;
+$font-heading-4: 26px; // ~44px line-height / 1000px-width
+$font-heading-5: 20px;
+$font-heading-6: 16px;
+
+$para: 19px;
 
 // Background Colors
 $dark-background: #050517;
@@ -40,4 +44,29 @@ $button: #0a556a;
 @font-face {
    font-family: barlow-black;
    src: url(../fonts/Barlow/Barlow-Black.ttf);
+}
+
+@font-face {
+   font-family: barlow-xtraBold;
+   src: url(../fonts/Barlow/Barlow-ExtraBold.ttf);
+}
+
+@font-face {
+   font-family: barlow-Bold;
+   src: url(../fonts/Barlow/Barlow-Bold.ttf);
+}
+
+@font-face {
+   font-family: barlow-semiBold;
+   src: url(../fonts/Barlow/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+   font-family: FiraSans-Regular;
+   src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
+}
+
+@font-face {
+   font-family: FiraSans-Thin;
+   src: url(../fonts/Fira_Sans/FiraSans-Thin.ttf);
 }

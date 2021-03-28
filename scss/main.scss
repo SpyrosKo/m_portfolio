@@ -12,7 +12,6 @@
 
 body {
    background: $light-background;
-   font-family: poppins-regular;
 }
 
 ol {
@@ -38,17 +37,17 @@ h2 {
    font-weight: 900;
 }
 
-// Menu Nav
-
-
-
+p {
+   font-family: FiraSans-Thin;
+   font-size: $para;
+}
 
 
 // ********************************************************
 // Header
 .header {
    background: $dark-font-color;
-   font-family: barlow-black;
+   font-family: barlow-semiBold;
    padding: 1rem 5rem 1rem 3rem;
 
    .nav {
@@ -70,12 +69,13 @@ h2 {
          align-items: center;
 
          li {
-            padding: 0 2rem;
-            letter-spacing: 1pxs;
+            letter-spacing: 1px;
 
             a {
                font-weight: 100;
                text-shadow: 1px 1px 1px #111;
+               margin: 0 2rem;
+
             }
          }
       }
@@ -91,8 +91,6 @@ h2 {
       position: relative;
 
       &:hover {
-         color: $light-font-color;
-         color: #80abd8;
          color: #fff;
          text-decoration: none;
       }
@@ -142,20 +140,15 @@ h2 {
       grid-column: 2;
 
       .hero__lg-heading {
+         font-family: barlow-Bold;
          font-size: $font-heading-1;
          font-weight: 900;
-         text-transform: full-width;
+         text-transform: uppercase;
+         word-spacing: 10px;
       }
 
       .hero__myname {
-         font-family: poppins-light;
-         font-weight: 100;
-      }
-
-      .hero__sm-heading {
-         padding: 0.5rem 0;
-         font-size: 1.9rem;
-         font-weight: 600;
+         font-family: FiraSans-Thin;
       }
    }
 
@@ -165,8 +158,11 @@ h2 {
 
       .hero__intro {
          padding: 1rem 0;
-         font-size: 1.5rem;
+         font-size: $font-heading-4;
          font-weight: 400;
+         font-family: FiraSans-Regular;
+         line-height: 44px;
+
       }
 
       .hero__contact-cta {
@@ -174,7 +170,8 @@ h2 {
          border-radius: 5px;
          color: #d5ebe4;
          display: block;
-         font-size: 1.6rem;
+         font-family: FiraSans-Regular;
+         font-size: 20px;
          font-weight: 900;
          letter-spacing: 3px;
          margin-top: 4rem;
@@ -185,6 +182,7 @@ h2 {
 
          &:hover {
             background-color: darken($button, 5%);
+            box-shadow: 0 0 1px 20px hsla(345, 58%, 48%, 0.03);
             color: #fff;
          }
 
@@ -203,6 +201,8 @@ h2 {
    grid-template-columns: 14vw auto 15vw;
    padding: 7rem 0;
    text-align: right;
+   font-family: barlow-Bold;
+
 
    &__heading {
       border-bottom: 1.5px solid $light-font-color;
@@ -211,7 +211,7 @@ h2 {
       border-top: 1px solid $light-font-color;
       color: $light-font-color;
       color: #d5ebe4;
-      font-size: 2.5rem;
+      font-size: $font-heading-2;
       grid-column: 2;
       justify-self: end;
       text-align: right;
@@ -223,32 +223,33 @@ h2 {
       padding: 3rem 0;
       padding-bottom: 0;
 
+      .about__email {
+         color: #f49e4c;
+         font-size: 1.15rem;
+         font-weight: 700;
+         transition: $transition-hover;
+         width: max-content;
+         float: right;
+
+         &:hover {
+            color: #fff;
+         }
+
+         &:active {
+            color: #d5ebe4;
+         }
+      }
+
       .about__para {
          color: $light-font-color;
          color: #d5ebe4;
-         font-size: 1.05rem;
+         font-size: $para;
          letter-spacing: 1px;
          line-height: 2rem;
          padding-bottom: 1rem;
          font-weight: 100;
-         font-family: poppins-light;
 
-         a {
-            color: #f49e4c;
-            font-size: 1.15rem;
-            font-weight: 700;
-            transition: $transition-hover;
-            width: max-content;
-            float: right;
 
-            &:hover {
-               color: #fff;
-            }
-
-            &:active {
-               color: #d5ebe4;
-            }
-         }
       }
    }
 }
@@ -257,18 +258,18 @@ h2 {
 .work {
    background: $light-font-color;
    background-color: #d5ebe4;
-   padding-top: 10rem;
-   padding-bottom: 10rem;
+   padding: 7rem 0;
 
 
    &__heading {
       color: $dark-font-color;
       font-size: $font-heading-2;
+      font-family: barlow-Bold;
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
-      border-bottom: 1px solid rgba(5, 5, 23, 25%);
-      border-top: 1px solid rgba(5, 5, 23, 25%);
+      border-bottom: 1px solid $light-font-color;
+      border-top: 1px solid $light-font-color;
    }
 
    &__projects {
@@ -359,27 +360,20 @@ h2 {
 
 .skills__container {
    margin: auto;
-   border-bottom: 3px solid $light-background;
+   padding: 5rem 0;
+   background-color: #050517;
+
 
    .skills__header {
       color: $light-background;
-      font-size: 2.5rem;
-      /* margin-bottom: 5rem; */
+      font-size: $font-heading-2;
       text-align: center;
       text-transform: uppercase;
       word-spacing: 4px;
-      background-color: #050517;
       padding: 1rem;
-
+      font-family: barlow-semiBold;
 
    }
-
-   .skills__header::before {
-      content: 'What I use ';
-      border-bottom: 1px solid $light-font-color;
-      border-top: 1px solid $light-font-color;
-   }
-
 
    .skills {
       background: $dark-background;
@@ -423,12 +417,14 @@ h2 {
 
 // Contact
 .contact__heading {
-   border-bottom: 1px solid $dark-font-color;
-   border-top: 1px solid $dark-font-color;
+   border-bottom: 1px solid $light-font-color;
+   border-top: 1px solid $light-font-color;
    font-size: $font-heading-2;
+   font-family: barlow-semiBold;
    margin: 5rem 0;
-   letter-spacing: 1.5px;
    text-align: center;
+   text-transform: uppercase;
+   word-spacing: 5px;
    width: 100%;
 }
 
