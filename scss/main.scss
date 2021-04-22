@@ -12,6 +12,7 @@
 
 body {
    background: $light-background;
+   font-family: FiraSans-Regular;
 }
 
 ol {
@@ -287,7 +288,7 @@ p {
          flex-direction: column;
          align-items: center;
          text-align: center;
-
+         font-family: FiraSans-Thin;
 
          .link {
             width: 100%;
@@ -384,6 +385,7 @@ p {
       grid-gap: 2rem;
       justify-content: center;
       padding: 2rem;
+      font-family: FiraSans-Thin;
 
       &__name {
          background: lighten($light-background, 5%);

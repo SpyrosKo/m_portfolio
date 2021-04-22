@@ -48,6 +48,7 @@
 
 body {
   background: #d5ebe4;
+  font-family: FiraSans-Regular;
 }
 
 ol {
@@ -357,6 +358,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  font-family: FiraSans-Thin;
 }
 
 .work__projects .projects__item .link {
@@ -455,6 +457,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem;
+  font-family: FiraSans-Thin;
 }
 
 .skills__container .skills__name {
