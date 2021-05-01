@@ -38,6 +38,10 @@
   src: url(../fonts/Fira_Sans/FiraSans-Thin.ttf);
 }
 
+.menu-btn {
+  display: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -123,10 +127,6 @@ p {
   margin: 0 2rem;
 }
 
-.header .nav .toggle {
-  display: none;
-}
-
 .header a {
   color: #d5ebe4;
   -webkit-transition: all 0.2s;
@@ -164,14 +164,6 @@ p {
   -webkit-transform-origin: left;
           transform-origin: left;
   width: 100%;
-}
-
-.header .active {
-  color: #72bda3;
-  font-weight: 900 !important;
-  font-size: 1.1rem;
-  text-decoration: underline !important;
-  text-shadow: 1px 1px 1px #111;
 }
 
 .hero {
@@ -777,6 +769,140 @@ input:focus,
 }
 
 @media (max-width: 768px) {
+  .menu-btn {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    right: 1.5rem;
+    top: 0.5rem;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+            box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    -webkit-transform: translateY(-16px);
+            transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+  }
+  /* Hamburger Animation */
+  .menu-btn.open .menu-btn__burger {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    -webkit-transform: rotate(45deg) translate(35px, -35px);
+            transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    -webkit-transform: rotate(-45deg) translate(35px, 35px);
+            transform: rotate(-45deg) translate(35px, 35px);
+  }
+  button {
+    border: none;
+  }
+  .header {
+    padding: 1rem 5rem 1rem 3rem;
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+  }
+  .header .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 80%;
+    top: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3rem 0 4rem 0;
+  }
+  .header .nav .logo a img {
+    width: 75px;
+    height: auto;
+    display: block;
+  }
+  .header .nav .logo a::after {
+    content: '';
+    height: 0;
+  }
+  .header .nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.3rem;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .header .nav .menu li {
+    letter-spacing: 1px;
+  }
+  .header .nav .menu li a {
+    font-weight: 100;
+    text-shadow: 1px 1px 1px #111;
+    margin: 0 2rem;
+  }
   .hero {
     -ms-grid-columns: 4rem auto 4rem;
         grid-template-columns: 4rem auto 4rem;

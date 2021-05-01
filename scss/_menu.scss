@@ -1,0 +1,117 @@
+// Humburger Icon
+.menu-btn {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 80px;
+   height: 80px;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+   background-color: transparent;
+   right: 1.5rem;
+   top: 0.5rem
+}
+
+.menu-btn__burger {
+   width: 50px;
+   height: 6px;
+   background: #fff;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+   transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+   content: '';
+   position: absolute;
+   width: 50px;
+   height: 6px;
+   background: #fff;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+   transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+   transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+   transform: translateY(16px);
+}
+
+/* Hamburger Animation */
+.menu-btn.open .menu-btn__burger {
+   transform: translateX(-50px);
+   background: transparent;
+   box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+   transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+button {
+   border: none;
+}
+
+// Menu Links Flex Elements
+.header {
+   padding: 1rem 5rem 1rem 3rem;
+   width: 60vw;
+   height: 100vh;
+   position: absolute;
+
+   .nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 80%;
+      top: 2rem;
+      flex-direction: column;
+
+      .logo {
+         display: flex;
+         justify-content: center;
+         padding: 3rem 0 4rem 0;
+
+         a {
+            img {
+               width: 75px;
+               height: auto;
+               display: block;
+            }
+
+            &::after {
+               content: '';
+               height: 0;
+            }
+         }
+      }
+
+      .menu {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         font-size: 1.3rem;
+         flex-grow: 2;
+
+         li {
+            letter-spacing: 1px;
+
+            a {
+               font-weight: 100;
+               text-shadow: 1px 1px 1px #111;
+               margin: 0 2rem;
+
+            }
+         }
+      }
+   }
+}

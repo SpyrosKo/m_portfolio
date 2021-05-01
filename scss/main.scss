@@ -1,5 +1,8 @@
 @import '_variables';
-@import '_menu';
+
+.menu-btn {
+   display: none;
+}
 
 // Global
 * {
@@ -80,10 +83,6 @@ p {
             }
          }
       }
-
-      .toggle {
-         display: none;
-      }
    }
 
    a {
@@ -115,14 +114,6 @@ p {
       transform: scaleX(1);
       transform-origin: left;
       width: 100%;
-   }
-
-   .active {
-      color: $light-font-color;
-      font-weight: 900 !important;
-      font-size: 1.1rem;
-      text-decoration: underline !important;
-      text-shadow: 1px 1px 1px #111;
    }
 }
 

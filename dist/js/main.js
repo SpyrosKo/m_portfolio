@@ -1,4 +1,17 @@
-// removing links
-let link = document.querySelector('.link');
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
 
-link.href = '';
+const menuBars = document.querySelector('.menu-btn__burger');
+
+
+menuBtn.addEventListener('click', () => {
+   if (!menuOpen) {
+      menuBtn.classList.add('open');
+      menuOpen = true;
+
+   } else {
+      menuBtn.classList.remove('open');
+      menuOpen = false;
+   }
+});
+
