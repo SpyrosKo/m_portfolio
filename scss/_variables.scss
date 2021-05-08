@@ -31,42 +31,18 @@ $transition-hover: all 0.2s;
 // Buttons
 $button: #0a556a;
 
+// Fonts
 @font-face {
-   font-family: poppins-regular;
-   src: url(../fonts/poppins/Poppins-Regular.ttf);
+   font-family: Helvetica;
+   src: url(../fonts/Helvetica/Helvetica.ttf);
 }
 
 @font-face {
-   font-family: poppins-light;
-   src: url(../fonts/poppins/Poppins-Light.ttf);
+   font-family: Comfortaa;
+   src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
 
 @font-face {
-   font-family: barlow-black;
-   src: url(../fonts/Barlow/Barlow-Black.ttf);
-}
-
-@font-face {
-   font-family: barlow-xtraBold;
-   src: url(../fonts/Barlow/Barlow-ExtraBold.ttf);
-}
-
-@font-face {
-   font-family: barlow-Bold;
-   src: url(../fonts/Barlow/Barlow-Bold.ttf);
-}
-
-@font-face {
-   font-family: barlow-semiBold;
-   src: url(../fonts/Barlow/Barlow-SemiBold.ttf);
-}
-
-@font-face {
-   font-family: FiraSans-Regular;
-   src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
-}
-
-@font-face {
-   font-family: FiraSans-Thin;
-   src: url(../fonts/Fira_Sans/FiraSans-Thin.ttf);
+   font-family: Josefin_Sans;
+   src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
 }

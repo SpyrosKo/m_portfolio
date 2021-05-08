@@ -1,17 +1,27 @@
+// DOM elements
 const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
+let bars = document.querySelector('.menu-btn__burger');
+let header = document.querySelector('.header');
 
-const menuBars = document.querySelector('.menu-btn__burger');
+// Set initial state of menu
+let show = false;
+
+menuBtn.addEventListener('click', toggleMenu);
 
 
-menuBtn.addEventListener('click', () => {
-   if (!menuOpen) {
+function toggleMenu() {
+   if (!show) {
       menuBtn.classList.add('open');
-      menuOpen = true;
+      header.style.marginRight = '400px';
+      header.style.transition = 'all 1s';
 
+      show = true;
    } else {
       menuBtn.classList.remove('open');
-      menuOpen = false;
+      header.style.marginRight = '-400px';
+      show = false;
    }
-});
 
+}
+
+console.log(menuBtn);

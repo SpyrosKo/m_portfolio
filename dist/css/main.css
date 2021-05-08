@@ -1,41 +1,16 @@
 @font-face {
-  font-family: poppins-regular;
-  src: url(../fonts/poppins/Poppins-Regular.ttf);
+  font-family: Helvetica;
+  src: url(../fonts/Helvetica/Helvetica.ttf);
 }
 
 @font-face {
-  font-family: poppins-light;
-  src: url(../fonts/poppins/Poppins-Light.ttf);
+  font-family: Comfortaa;
+  src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: barlow-black;
-  src: url(../fonts/Barlow/Barlow-Black.ttf);
-}
-
-@font-face {
-  font-family: barlow-xtraBold;
-  src: url(../fonts/Barlow/Barlow-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: barlow-Bold;
-  src: url(../fonts/Barlow/Barlow-Bold.ttf);
-}
-
-@font-face {
-  font-family: barlow-semiBold;
-  src: url(../fonts/Barlow/Barlow-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: FiraSans-Regular;
-  src: url(../fonts/Fira_Sans/FiraSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: FiraSans-Thin;
-  src: url(../fonts/Fira_Sans/FiraSans-Thin.ttf);
+  font-family: Josefin_Sans;
+  src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
 }
 
 .menu-btn {
@@ -52,7 +27,6 @@
 
 body {
   background: #d5ebe4;
-  font-family: FiraSans-Regular;
 }
 
 ol {
@@ -74,18 +48,24 @@ img {
 }
 
 h1,
-h2 {
-  font-weight: 900;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Josefin_Sans;
 }
 
 p {
-  font-family: FiraSans-Thin;
   font-size: 19px;
+}
+
+a {
+  font-family: Josefin_Sans;
 }
 
 .header {
   background: #050517;
-  font-family: barlow-semiBold;
   padding: 1rem 5rem 1rem 3rem;
 }
 
@@ -125,6 +105,8 @@ p {
   font-weight: 100;
   text-shadow: 1px 1px 1px #111;
   margin: 0 2rem;
+  text-transform: uppercase;
+  word-spacing: 2px;
 }
 
 .header a {
@@ -176,6 +158,7 @@ p {
       grid-template-columns: 15vw auto 25vw;
   padding: 6rem 0;
   padding-top: 7rem;
+  height: 100vh;
 }
 
 .hero__headings {
@@ -183,16 +166,32 @@ p {
   grid-column: 2;
 }
 
-.hero__headings .hero__lg-heading {
-  font-family: barlow-Bold;
+.hero__headings h1.hero__lg-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 54px;
-  font-weight: 900;
   text-transform: uppercase;
   word-spacing: 10px;
+  line-height: 0.7;
+  text-decoration: underline;
 }
 
-.hero__headings .hero__myname {
-  font-family: FiraSans-Thin;
+.hero__headings h1.hero__lg-heading .flip {
+  display: inline-block;
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.hero__headings h2.hero__myname {
+  font-weight: 500;
+  line-height: 3;
+  word-spacing: 1rem;
+  text-transform: uppercase;
 }
 
 .hero__description {
@@ -206,7 +205,6 @@ p {
   padding: 1rem 0;
   font-size: 26px;
   font-weight: 400;
-  font-family: FiraSans-Regular;
   line-height: 44px;
 }
 
@@ -215,7 +213,6 @@ p {
   border-radius: 5px;
   color: #d5ebe4;
   display: block;
-  font-family: FiraSans-Regular;
   font-size: 20px;
   font-weight: 900;
   letter-spacing: 3px;
@@ -249,7 +246,7 @@ p {
       grid-template-columns: 14vw auto 15vw;
   padding: 7rem 0;
   text-align: right;
-  font-family: barlow-Bold;
+  height: 100vh;
 }
 
 .about__heading {
@@ -309,12 +306,12 @@ p {
   background: #72bda3;
   background-color: #d5ebe4;
   padding: 7rem 0;
+  height: 100vh;
 }
 
 .work__heading {
   color: #050517;
   font-size: 42px;
-  font-family: barlow-Bold;
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
@@ -350,7 +347,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-family: FiraSans-Thin;
 }
 
 .work__projects .projects__item .link {
@@ -424,6 +420,7 @@ p {
   margin: auto;
   padding: 5rem 0;
   background-color: #050517;
+  height: 100vh;
 }
 
 .skills__container .skills__header {
@@ -433,7 +430,6 @@ p {
   text-transform: uppercase;
   word-spacing: 4px;
   padding: 1rem;
-  font-family: barlow-semiBold;
 }
 
 .skills__container .skills {
@@ -449,7 +445,6 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem;
-  font-family: FiraSans-Thin;
 }
 
 .skills__container .skills__name {
@@ -493,7 +488,6 @@ p {
   border-bottom: 1px solid #72bda3;
   border-top: 1px solid #72bda3;
   font-size: 42px;
-  font-family: barlow-semiBold;
   margin: 5rem 0;
   text-align: center;
   text-transform: uppercase;
@@ -544,25 +538,21 @@ p {
 }
 
 .contact__details .subject::-webkit-input-placeholder {
-  font-family: poppins-regular;
   font-size: 1rem;
   padding: 0.5rem;
 }
 
 .contact__details .subject:-ms-input-placeholder {
-  font-family: poppins-regular;
   font-size: 1rem;
   padding: 0.5rem;
 }
 
 .contact__details .subject::-ms-input-placeholder {
-  font-family: poppins-regular;
   font-size: 1rem;
   padding: 0.5rem;
 }
 
 .contact__details .subject::placeholder {
-  font-family: poppins-regular;
   font-size: 1rem;
   padding: 0.5rem;
 }
@@ -770,7 +760,7 @@ input:focus,
 
 @media (max-width: 768px) {
   .menu-btn {
-    position: absolute;
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -788,6 +778,7 @@ input:focus,
     background-color: transparent;
     right: 1.5rem;
     top: 0.5rem;
+    z-index: 1;
   }
   .menu-btn__burger {
     width: 50px;
@@ -842,8 +833,10 @@ input:focus,
   .header {
     padding: 1rem 5rem 1rem 3rem;
     width: 60vw;
+    min-width: 300px;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    right: -400px;
   }
   .header .nav {
     display: -webkit-box;
@@ -902,6 +895,11 @@ input:focus,
     font-weight: 100;
     text-shadow: 1px 1px 1px #111;
     margin: 0 2rem;
+  }
+  .slide {
+    margin-right: 400px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
   }
   .hero {
     -ms-grid-columns: 4rem auto 4rem;

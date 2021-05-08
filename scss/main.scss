@@ -15,7 +15,6 @@
 
 body {
    background: $light-background;
-   font-family: FiraSans-Regular;
 }
 
 ol {
@@ -37,13 +36,21 @@ img {
 }
 
 h1,
-h2 {
-   font-weight: 900;
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: Josefin_Sans;
 }
 
 p {
-   font-family: FiraSans-Thin;
    font-size: $para;
+}
+
+a {
+   font-family: Josefin_Sans;
+
 }
 
 
@@ -51,7 +58,6 @@ p {
 // Header
 .header {
    background: $dark-font-color;
-   font-family: barlow-semiBold;
    padding: 1rem 5rem 1rem 3rem;
 
    .nav {
@@ -79,6 +85,8 @@ p {
                font-weight: 100;
                text-shadow: 1px 1px 1px #111;
                margin: 0 2rem;
+               text-transform: uppercase;
+               word-spacing: 2px;
 
             }
          }
@@ -128,19 +136,31 @@ p {
    padding: 6rem 0;
    padding-top: 7rem;
 
+   height: 100vh;
+
    &__headings {
       grid-column: 2;
 
-      .hero__lg-heading {
-         font-family: barlow-Bold;
+      h1.hero__lg-heading {
+         display: flex;
+         flex-direction: column;
          font-size: $font-heading-1;
-         font-weight: 900;
          text-transform: uppercase;
          word-spacing: 10px;
+         line-height: 0.7;
+         text-decoration: underline;
+
+         .flip {
+            display: inline-block;
+            transform: scale(1, -1);
+         }
       }
 
-      .hero__myname {
-         font-family: FiraSans-Thin;
+      h2.hero__myname {
+         font-weight: 500;
+         line-height: 3;
+         word-spacing: 1rem;
+         text-transform: uppercase;
       }
    }
 
@@ -148,13 +168,12 @@ p {
       grid-column: 2;
       grid-row: 2;
 
+
       .hero__intro {
          padding: 1rem 0;
          font-size: $font-heading-4;
          font-weight: 400;
-         font-family: FiraSans-Regular;
          line-height: 44px;
-
       }
 
       .hero__contact-cta {
@@ -162,7 +181,6 @@ p {
          border-radius: 5px;
          color: #d5ebe4;
          display: block;
-         font-family: FiraSans-Regular;
          font-size: 20px;
          font-weight: 900;
          letter-spacing: 3px;
@@ -193,7 +211,7 @@ p {
    grid-template-columns: 14vw auto 15vw;
    padding: 7rem 0;
    text-align: right;
-   font-family: barlow-Bold;
+   height: 100vh;
 
 
    &__heading {
@@ -251,12 +269,12 @@ p {
    background: $light-font-color;
    background-color: #d5ebe4;
    padding: 7rem 0;
+   height: 100vh;
 
 
    &__heading {
       color: $dark-font-color;
       font-size: $font-heading-2;
-      font-family: barlow-Bold;
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
@@ -279,7 +297,6 @@ p {
          flex-direction: column;
          align-items: center;
          text-align: center;
-         font-family: FiraSans-Thin;
 
          .link {
             width: 100%;
@@ -354,6 +371,7 @@ p {
    margin: auto;
    padding: 5rem 0;
    background-color: #050517;
+   height: 100vh;
 
 
    .skills__header {
@@ -363,7 +381,6 @@ p {
       text-transform: uppercase;
       word-spacing: 4px;
       padding: 1rem;
-      font-family: barlow-semiBold;
 
    }
 
@@ -376,7 +393,6 @@ p {
       grid-gap: 2rem;
       justify-content: center;
       padding: 2rem;
-      font-family: FiraSans-Thin;
 
       &__name {
          background: lighten($light-background, 5%);
@@ -413,7 +429,6 @@ p {
    border-bottom: 1px solid $light-font-color;
    border-top: 1px solid $light-font-color;
    font-size: $font-heading-2;
-   font-family: barlow-semiBold;
    margin: 5rem 0;
    text-align: center;
    text-transform: uppercase;
@@ -459,7 +474,6 @@ p {
          margin: 0.5rem 0 !important;
 
          &::placeholder {
-            font-family: poppins-regular;
             font-size: 1rem;
             padding: 0.5rem;
          }
@@ -518,6 +532,7 @@ textarea:focus {}
    justify-content: space-between;
    align-items: center;
    padding: 0.5rem 3rem;
+
 
    &__copy {
       line-height: 1.5rem;

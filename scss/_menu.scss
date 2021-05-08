@@ -1,6 +1,6 @@
 // Humburger Icon
 .menu-btn {
-   position: absolute;
+   position: fixed;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -10,7 +10,8 @@
    transition: all .5s ease-in-out;
    background-color: transparent;
    right: 1.5rem;
-   top: 0.5rem
+   top: 0.5rem;
+   z-index: 1;
 }
 
 .menu-btn__burger {
@@ -65,8 +66,10 @@ button {
 .header {
    padding: 1rem 5rem 1rem 3rem;
    width: 60vw;
+   min-width: 300px;
    height: 100vh;
-   position: absolute;
+   position: fixed;
+   right: -400px;
 
    .nav {
       display: flex;
@@ -114,4 +117,10 @@ button {
          }
       }
    }
+}
+
+// Menu interactions
+.slide {
+   margin-right: 400px;
+   transition: all 1s;
 }
