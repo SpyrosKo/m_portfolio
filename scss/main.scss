@@ -11,10 +11,12 @@
    padding: 0;
 
    word-break: keep-all;
+
 }
 
 body {
    background: $light-background;
+   font-family: Helvetica;
 }
 
 ol {
@@ -48,9 +50,9 @@ p {
    font-size: $para;
 }
 
-a {
-   font-family: Josefin_Sans;
 
+a {
+   letter-spacing: 2px;
 }
 
 
@@ -59,6 +61,8 @@ a {
 .header {
    background: $dark-font-color;
    padding: 1rem 5rem 1rem 3rem;
+   width: 98vw;
+
 
    .nav {
       display: flex;
@@ -82,7 +86,7 @@ a {
             letter-spacing: 1px;
 
             a {
-               font-weight: 100;
+               font-weight: 600;
                text-shadow: 1px 1px 1px #111;
                margin: 0 2rem;
                text-transform: uppercase;
@@ -136,12 +140,12 @@ a {
    padding: 6rem 0;
    padding-top: 7rem;
 
-   height: 100vh;
+   // height: 100vh;
 
    &__headings {
       grid-column: 2;
 
-      h1.hero__lg-heading {
+      h1.hero__occupation {
          display: flex;
          flex-direction: column;
          font-size: $font-heading-1;
@@ -153,12 +157,13 @@ a {
          .flip {
             display: inline-block;
             transform: scale(1, -1);
+            margin: 9px;
          }
       }
 
       h2.hero__myname {
          font-weight: 500;
-         line-height: 3;
+         line-height: 2;
          word-spacing: 1rem;
          text-transform: uppercase;
       }
@@ -169,31 +174,31 @@ a {
       grid-row: 2;
 
 
-      .hero__intro {
-         padding: 1rem 0;
+      .hero__myintro {
          font-size: $font-heading-4;
          font-weight: 400;
          line-height: 44px;
+         padding: 2rem 0;
       }
 
-      .hero__contact-cta {
+      .hero__cta {
          background-color: $button;
-         border-radius: 5px;
+         border-radius: 100px;
          color: #d5ebe4;
-         display: block;
-         font-size: 20px;
+         display: inline-block;
+         font-size: 1rem;
          font-weight: 900;
+         height: 3rem;
          letter-spacing: 3px;
-         margin-top: 4rem;
-         padding: 0.8rem;
+         line-height: 3rem;
+         padding: 0 0.5rem;
          text-transform: uppercase;
          transition: $transition-hover;
-         width: max-content;
 
          &:hover {
-            background-color: darken($button, 5%);
-            box-shadow: 0 0 1px 20px hsla(345, 58%, 48%, 0.03);
-            color: #fff;
+            // background-color: darken($button, 5%);
+            // box-shadow: 0 0 1px 20px hsla(345, 58%, 48%, 0.03);
+            // color: #fff;
          }
 
          &:active {
@@ -211,21 +216,17 @@ a {
    grid-template-columns: 14vw auto 15vw;
    padding: 7rem 0;
    text-align: right;
-   height: 100vh;
 
 
    &__heading {
-      border-bottom: 1.5px solid $light-font-color;
-      border-left: none;
-      border-right: none;
-      border-top: 1px solid $light-font-color;
       color: $light-font-color;
       color: #d5ebe4;
       font-size: $font-heading-2;
       grid-column: 2;
-      justify-self: end;
+      justify-self: start;
       text-align: right;
       text-transform: uppercase;
+      width: 17ch;
    }
 
    &__bio {
@@ -235,11 +236,10 @@ a {
 
       .about__email {
          color: #f49e4c;
+         display: block;
          font-size: 1.15rem;
          font-weight: 700;
          transition: $transition-hover;
-         width: max-content;
-         float: right;
 
          &:hover {
             color: #fff;
@@ -250,7 +250,7 @@ a {
          }
       }
 
-      .about__para {
+      .about__myself {
          color: $light-font-color;
          color: #d5ebe4;
          font-size: $para;
@@ -258,8 +258,6 @@ a {
          line-height: 2rem;
          padding-bottom: 1rem;
          font-weight: 100;
-
-
       }
    }
 }
@@ -268,9 +266,14 @@ a {
 .work {
    background: $light-font-color;
    background-color: #d5ebe4;
-   padding: 7rem 0;
-   height: 100vh;
+   position: relative;
+   // background-size: cover;
+   // background-position: left bottom;   
+   //background-repeat: no-repeat;
+   // background-image: url(../img/Polygon1.svg);
 
+   padding: 7rem 0;
+   height: 100%;
 
    &__heading {
       color: $dark-font-color;
@@ -278,8 +281,8 @@ a {
       letter-spacing: 1px;
       text-align: center;
       text-transform: uppercase;
-      border-bottom: 1px solid $light-font-color;
-      border-top: 1px solid $light-font-color;
+      text-decoration: underline;
+      // text-decoration: overline;
    }
 
    &__projects {
@@ -364,6 +367,15 @@ a {
    }
 }
 
+.work::before {
+   content: '';
+   position: absolute;
+   background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-image: url(../img/Polygon1.svg);
+}
+
 // Skills
 
 
@@ -371,7 +383,6 @@ a {
    margin: auto;
    padding: 5rem 0;
    background-color: #050517;
-   height: 100vh;
 
 
    .skills__header {

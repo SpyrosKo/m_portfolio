@@ -13,7 +13,7 @@
       margin-top: 1rem;
    }
 
-   .hero__description .hero__intro {
+   .hero__description .hero__myintro {
       font-weight: 100;
       line-height: 2.2rem;
    }
@@ -28,7 +28,7 @@
       }
    }
 
-   .about__bio .about__para a {
+   .about__bio .about__myself a {
       font-size: 1rem;
       letter-spacing: 1px;
    }
@@ -51,7 +51,7 @@
 
    .work__projects .projects__item {}
 
-   #container .about__bio .about__para a {
+   #container .about__bio .about__myself a {
       margin-top: 2rem;
       // display: none;   
    }

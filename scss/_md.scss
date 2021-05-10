@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 840px) {
 
    @import '_menu';
 
@@ -11,7 +11,7 @@
       text-align: left;
       margin: 0;
 
-      .hero__contact-cta {
+      .hero__cta {
          margin-top: 4rem;
       }
    }
@@ -23,6 +23,7 @@
 
       &__heading {
          max-width: 395px;
+         text-align: center;
       }
 
       &__bio {}
@@ -65,7 +66,7 @@
       width: 75%;
    }
 
-   #container .about__bio .about__para a {
+   #container .about__bio .about__myself a {
       margin-top: 2rem;
       display: block;
    }

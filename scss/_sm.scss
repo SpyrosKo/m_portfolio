@@ -1,20 +1,13 @@
 @media (max-width: 600px) {
 
-
-
-
-
-   // *********************************
-
-
    .hero {
       grid-template-columns: 2rem auto 2rem;
       text-align: center;
       margin: 0;
 
-      .hero__contact-cta {
+      .hero__cta {
          margin: auto;
-         margin-top: 4rem;
+         // margin-top: 4rem;
       }
    }
 
@@ -28,16 +21,16 @@
       }
 
       &__bio {
-         text-align: left;
+         text-align: center;
 
-         .about__para {
+         .about__myself {
             .about__email {
                // float: left;
             }
          }
 
          a {
-            float: left;
+            float: center;
          }
       }
    }
