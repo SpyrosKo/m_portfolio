@@ -46,46 +46,50 @@
 	<div id="container">
 		<div id="home"></div>
 
-		<header class="header">
+		<button class="menu-btn">
+			<div class="menu-btn__burger"></div>
+		</button>
 
+		<header class="header">
+			<!-- ---------------------------------- -->
+			<!-- -------------- MAIN NAVIGATION ---------------------------------->
+			<!-- ---------------------------------- -->
 			<nav class="nav">
 				<li class="logo">
 					<a href="#">
 						<img src="./img/Circle.png" alt="">
 					</a>
 				</li>
-
 				<ul class="menu">
-					<li class="item"><a href="#">About Me</a></li>
-					<li class="item"><a href="#">My Works</a></li>
-					<li class="item"><a href="#">My Skills</a></li>
-					<li class="item"><a href="#">Reach Me</a></li>
+					<li class="item"><a href="#about">About Me</a></li>
+					<li class="item"><a href="#work">My Works</a></li>
+					<li class="item"><a href="#skills">My Skills</a></li>
+					<li class="item"><a href="#contact">Reach Me</a></li>
 				</ul>
-				<li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
 			</nav>
 
 		</header>
 
 		<main class="main">
-			<!-- Hero Section -->
+			<!-- Hero Section ---------------------------------------------------->
 			<section class="hero">
 				<div class="hero__headings">
-					<h1 class="hero__lg-heading">
-						Full Stack Designer
+					<h1 class="hero__occupation">
+						Full Stack
+						<span class="flip">Designer</span>
 					</h1>
 					<h2 class="hero__myname">
 						Spiridon Konofaos
 					</h2>
 				</div>
 				<div class="hero__description">
-					<h2 class="hero__intro">
-						Websites and apps are all about the users. I can help you fulfill all their needs and desires. Contact
-						me today so we can get in touch.
-
-						<a class="hero__contact-cta" href="#contact">
-							Contact
-						</a>
+					<h2 class="hero__myintro">
+						Websites and apps made for people. Centered on the experience you want, and the usability to
+						reach your product goal.
 					</h2>
+					<a class="hero__cta" href="#contact">
+						Contact
+					</a>
 				</div>
 			</section>
 			<!-- Hero End -->
@@ -94,16 +98,16 @@
 			<div id="about"></div>
 			<section class="about">
 				<h2 class="about__heading">
-					What I do and how I do it
+					What I do and how I do it.
 				</h2>
 				<div class="about__bio">
-					<p class="about__para">
+					<p class="about__myself">
 						I create engaging and responsive websites for you and your business. My drive is to
 						help you bring in
 						more business with
-						elegantly designed sites that function as they should, look amazing, and have great SEO.
+						elegantly designed sites.
 					</p>
-					<p class="about__para">If you are ready to see results, please contact me at:
+					<p class="about__myself">Please contact me for more information.
 					</p>
 					<p>
 						<a class="about__email" href="mailto:spyros.konofaos1@gmail.com">
@@ -114,7 +118,8 @@
 			</section>
 
 			<!-- Projects -->
-			<section id="work" class="work">
+			<div id="work"></div>
+			<section class="work">
 				<h2 class="work__heading">
 					What I've made recently
 				</h2>
@@ -145,31 +150,33 @@
 						</a>
 					</div>
 					<div class="projects__item">
-						<a href="https://chingu-voyages.github.io/v13-toucans-team-01/" class="projects__link"
-							target="_blank">
+						<a href="https://spyrosko.github.io/toucan-bank/" class="projects__link" target="_blank">
 							<img src="img/toucan-bank.jpg" alt="Toucan Bank Investments">
 						</a>
-						<a href="https://chingu-voyages.github.io/v13-toucans-team-01/" target="_blank"
-							class="projects__project">
+						<a href="https://spyrosko.github.io/toucan-bank/" target="_blank" class="projects__project">
 							</i>Project
 						</a>
-						<a href="https://github.com/SpyrosKo/Bank_Toucan_Investment_Banking" target="_blank"
-							class="projects__github">
+						<a href="https://github.com/SpyrosKo/toucan-bank" target="_blank" class="projects__github">
 							Github
 						</a>
 					</div>
 					<div class="projects__item">
-
-						<img class="coming-soon" src="img/placeholder.png" />
-						<div class="link"></div> <!-- placeholder-->
-						<div class="link"></div> <!-- placeholder-->
+						<a href="https://johnrhead.com/" class="projects__link" target="_blank">
+							<img src="img/johnrhead.jpg" alt="History of Nonprofits">
+						</a>
+						<a href="https://johnrhead.com/" class="projects__project" target="_blank">
+							Project
+						</a>
+						<a href="https://johnrhead.com/" class="projects__github" target="_blank">
+							Github
+						</a>
 					</div>
 				</section>
 			</section>
 			<!-- Projects End -->
 
 			<!-- Skills I got -->
-
+			<div id="skills"></div>
 			<div class="skills__container">
 				<h2 class="skills__header">
 					What I use
@@ -221,6 +228,7 @@
 
 
 			<!-- Contact Form -->
+			<div id="contact"></div>
 			<div class="kwes-form">
 				<h2 class="contact__heading">
 					Reach out so we can talk
@@ -271,7 +279,6 @@
 	</div> <!-- end Container-->
 
 	<script src="js/main.js"></script>
-	<script src="https://kwes.io/js/kwes.js" charset="utf-8"></script>
 </body>
 
 </html>
