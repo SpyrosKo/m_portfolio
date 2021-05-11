@@ -48,19 +48,41 @@
       margin-bottom: 0;
    }
 
-   .skills__container {
-      .skills {
-         padding: 1rem;
-         margin: 0 15vw;
-         grid-template-columns: repeat(2, minmax(100px, 200px));
-         justify-self: center;
-         grid-gap: 4rem;
+   //----------------------- SKILLS -------------------------
+   .skills {
+      padding: 0;
 
-         &__name {
-            padding: 1rem;
+      .skills__grid {
+         column-gap: 2rem;
+         row-gap: 2rem;
+         grid-template-columns: 1fr;
+         grid-template-areas:
+            " lang-img"
+            "  lang "
+            "  tech-img "
+            " tech-text"
+            "  cms-img "
+            "cms-text ";
+         justify-content: center;
+         text-align: center;
+
+         .text {
+            // max-width: 200px;
+            padding-bottom: 5rem;
          }
       }
+
+      .text {
+         // justify-self: center;
+      }
+
+      p {
+         font-size: 1.8rem;
+         line-height: 3rem;
+      }
    }
+
+
 
    .contact__details {
       width: 75%;

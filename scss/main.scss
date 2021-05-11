@@ -44,6 +44,7 @@ h4,
 h5,
 h6 {
    font-family: Josefin_Sans;
+   text-transform: uppercase;
 }
 
 p {
@@ -149,7 +150,6 @@ a {
          display: flex;
          flex-direction: column;
          font-size: $font-heading-1;
-         text-transform: uppercase;
          word-spacing: 10px;
          line-height: 0.7;
          text-decoration: underline;
@@ -165,7 +165,6 @@ a {
          font-weight: 500;
          line-height: 2;
          word-spacing: 1rem;
-         text-transform: uppercase;
       }
    }
 
@@ -218,14 +217,13 @@ a {
    text-align: right;
 
 
-   &__heading {
+   h2.about__heading {
       color: $light-font-color;
       color: #d5ebe4;
       font-size: $font-heading-2;
       grid-column: 2;
       justify-self: start;
       text-align: right;
-      text-transform: uppercase;
       width: 17ch;
    }
 
@@ -275,12 +273,11 @@ a {
    padding: 7rem 0;
    height: 100%;
 
-   &__heading {
+   h2.work__heading {
       color: $dark-font-color;
       font-size: $font-heading-2;
       letter-spacing: 1px;
       text-align: center;
-      text-transform: uppercase;
       text-decoration: underline;
       // text-decoration: overline;
    }
@@ -371,78 +368,96 @@ a {
    content: '';
    position: absolute;
    background-size: cover;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-image: url(../img/Polygon1.svg);
+   background-position: left bottom;
+   background-repeat: no-repeat;
+   background-image: url(../img/Polygon1.svg);
 }
 
 // Skills
 
-
-.skills__container {
-   margin: auto;
-   padding: 5rem 0;
+.skills {
+   height: 100%;
+   padding: 0 15vw;
+   background-image: url(../img/skills-bg.svg);
    background-color: #050517;
 
-
-   .skills__header {
-      color: $light-background;
+   h2.skills__header {
       font-size: $font-heading-2;
-      text-align: center;
-      text-transform: uppercase;
-      word-spacing: 4px;
-      padding: 1rem;
-
    }
 
-   .skills {
-      background: $dark-background;
-      color: $dark-font-color;
+   &__grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(100px, 200px));
-      text-align: center;
-      grid-gap: 2rem;
-      justify-content: center;
-      padding: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+         "  lang lang-img "
+         "  tech-img tech-text "
+         "  cms-text cms-img ";
+      justify-items: center;
+      align-items: center;
+      column-gap: 8rem;
+      row-gap: 6rem;
+      font-family: Helvetica;
 
-      &__name {
-         background: lighten($light-background, 5%);
-         display: flex;
-         border-radius: 8px;
-         align-items: center;
-         flex-direction: column;
-         padding: 1rem 0;
 
-         img {
-            display: block;
-            width: 100%;
-            max-width: 100px;
-            height: auto;
-         }
+      .skills__grid-item {
+         // border: 1px solid gray;
+         width: 100%;
+         max-width: 200px;
 
-         ul {
-            align-self: center;
-            margin: 0.75rem 0;
+      }
 
-            li {
-               line-height: 1.2rem;
-               padding: 0 0.5rem;
-               padding-bottom: 0.3rem;
-               font-weight: 600;
-            }
-         }
+      img {
+         width: 80%;
+         max-width: 300px;
+      }
+
+      p {
+         font-size: $font-heading-2;
+         color: #e4e4e4;
+
+      }
+
+      .text {
+         font-size: $font-heading-2;
+         line-height: 4rem;
+         letter-spacing: 10px;
+
+      }
+
+      .languages {
+         grid-area: lang;
+      }
+
+      .technologies {
+         grid-area: tech-text;
+      }
+
+      .cms {
+         grid-area: cms-text;
+      }
+
+      .lang-img {
+         grid-area: lang-img;
+      }
+
+      .tech-img {
+         grid-area: tech-img;
+      }
+
+      .cms-img {
+         grid-area: cms-img;
       }
    }
 }
 
 // Contact
-.contact__heading {
+h2.contact__heading {
    border-bottom: 1px solid $light-font-color;
    border-top: 1px solid $light-font-color;
    font-size: $font-heading-2;
    margin: 5rem 0;
    text-align: center;
-   text-transform: uppercase;
    word-spacing: 5px;
    width: 100%;
 }
