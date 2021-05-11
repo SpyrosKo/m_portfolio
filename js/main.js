@@ -1,6 +1,6 @@
 // DOM elements
 const menuBtn = document.querySelector('.menu-btn');
-let bars = document.querySelector('.menu-btn__burger');
+let bars = document.querySelector('.menu-btn');
 let header = document.querySelector('.header');
 let main = document.querySelector('.main');
 
@@ -15,7 +15,9 @@ function toggleMenu() {
       menuBtn.classList.add('open');
       header.style.marginRight = '450px';
       header.style.transition = 'all 1s';
-      header.opacity = '1';
+      header.style.opacity = '1';
+      header.style.zIndex = '5';
+      bars.style.zIndex = '10';
       main.style.opacity = '0.05';
       main.style.backgroundColor = 'black';
       main.style.color = 'black';
