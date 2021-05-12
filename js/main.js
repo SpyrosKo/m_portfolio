@@ -3,6 +3,7 @@ const menuBtn = document.querySelector('.menu-btn');
 let bars = document.querySelector('.menu-btn');
 let header = document.querySelector('.header');
 let main = document.querySelector('.main');
+let nav = document.querySelector('.nav');
 
 // Set initial state of menu
 let show = false;
@@ -17,10 +18,13 @@ function toggleMenu() {
       header.style.transition = 'all 1s';
       header.style.opacity = '1';
       header.style.zIndex = '5';
+      // nav.style.zIndex = '5';
       bars.style.zIndex = '10';
       main.style.opacity = '0.05';
       main.style.backgroundColor = 'black';
       main.style.color = 'black';
+
+      header.classList.add('zIndex');
 
 
       show = true;
