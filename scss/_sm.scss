@@ -1,77 +1,60 @@
 @media (max-width: 600px) {
-
-   .hero {
-      grid-template-columns: 2rem auto 2rem;
-      text-align: center;
-      margin: 0;
-
-      .hero__cta {
-         margin: auto;
-         // margin-top: 4rem;
-      }
-   }
-
-   // About
-   .about {
-      grid-template-columns: 1.5rem auto 1.5rem;
-
-      &__heading {
-         max-width: 395px;
-         justify-self: center;
-      }
-
-      &__bio {
+   #container {
+      .hero {
+         grid-template-columns: 2rem auto 2rem;
          text-align: center;
+         margin: 0;
 
-         .about__myself {
-            .about__email {
-               // float: left;
+         .hero__cta {
+            margin: auto;
+         }
+      }
+
+      // About
+      .about {
+         grid-template-columns: 1.5rem auto 1.5rem;
+
+         &__heading {}
+
+         &__bio {
+            text-align: center;
+
+            .about__myself {
+               .about__email {}
             }
-         }
 
-         a {
-            float: center;
+            a {}
          }
       }
-   }
 
-   // Work
+      // Work
 
-   .work {
-      &__projects {
-         display: grid;
-         grid-gap: 5rem;
-         grid-template-columns: 1fr;
-         padding: 5rem 3rem;
-         padding-top: 8rem;
-         justify-content: center;
+      .work {
+         &__projects {
+            display: grid;
+            grid-gap: 5rem;
+            grid-template-columns: 1fr;
+            padding: 5rem 3rem;
+            padding-top: 8rem;
+            justify-content: center;
+         }
       }
-   }
 
-
-   // Skills
-   .skills__container {
-      margin: auto;
+      // Skills
 
       .skills {
-         height: 100%;
-         margin: 0 25vw;
-         grid-gap: 1rem;
-         grid-template-columns: minmax(100px, 300px);
-         justify-self: center;
-         padding: 1rem 0;
+         grid-template-columns: 1fr;
+         grid-template-areas:
+            " lang-img"
+            "  lang "
+            "  tech-img "
+            " tech-text"
+            "  cms-img "
+            "cms-text ";
+      }
 
-         &__name {
-            flex-direction: row;
-            justify-content: space-around;
-
-            img {}
-         }
+      .contact__details {
+         width: 100%;
       }
    }
-
-   .contact__details {
-      width: 100%;
-   }
-
 }

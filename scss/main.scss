@@ -222,9 +222,9 @@ a {
       color: #d5ebe4;
       font-size: $font-heading-2;
       grid-column: 2;
-      justify-self: start;
-      text-align: right;
       width: 17ch;
+      line-height: 3.6rem;
+      justify-self: end;
    }
 
    &__bio {
@@ -377,7 +377,7 @@ a {
 
 .skills {
    height: 100%;
-   padding: 0 15vw;
+   padding: 5rem 15vw;
    background-image: url(../img/skills-bg.svg);
    background-color: #050517;
 
@@ -413,15 +413,14 @@ a {
       }
 
       p {
-         font-size: $font-heading-2;
-         color: #e4e4e4;
+         font-size: 26px;
+         color: $light-background;
 
       }
 
       .text {
-         font-size: $font-heading-2;
          line-height: 4rem;
-         letter-spacing: 10px;
+         letter-spacing: 5px;
 
       }
 

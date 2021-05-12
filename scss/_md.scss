@@ -3,93 +3,85 @@
    @import '_menu';
 
 
+   #container {
 
-   //***********************************************
-   // Hero 
-   .hero {
-      grid-template-columns: 4rem auto 4rem;
-      text-align: left;
-      margin: 0;
+      //***********************************************
+      // Hero 
+      .hero {
+         grid-template-columns: 4rem auto 4rem;
+         text-align: left;
+         margin: 0;
 
-      .hero__cta {
-         margin-top: 4rem;
-      }
-   }
-
-   // About
-
-   .about {
-      grid-template-columns: 5rem auto 1.5rem;
-
-      &__heading {
-         max-width: 395px;
-         text-align: center;
-      }
-
-      &__bio {}
-   }
-
-   .work {
-      padding: 5rem 0;
-      padding-bottom: 3rem;
-   }
-
-   .work__projects {
-      display: grid;
-      grid-gap: 3rem;
-      grid-template-columns: 1fr 1fr;
-      padding-bottom: 3.5rem;
-      padding-top: 6rem;
-      justify-content: center;
-      margin: 0;
-   }
-
-   .work__projects .projects__item .projects__link {
-      margin-bottom: 0;
-   }
-
-   //----------------------- SKILLS -------------------------
-   .skills {
-      padding: 0;
-
-      .skills__grid {
-         column-gap: 2rem;
-         row-gap: 2rem;
-         grid-template-columns: 1fr;
-         grid-template-areas:
-            " lang-img"
-            "  lang "
-            "  tech-img "
-            " tech-text"
-            "  cms-img "
-            "cms-text ";
-         justify-content: center;
-         text-align: center;
-
-         .text {
-            // max-width: 200px;
-            padding-bottom: 5rem;
+         .hero__cta {
+            margin-top: 4rem;
          }
       }
 
-      .text {
-         // justify-self: center;
+      // About
+
+      .about {
+         grid-template-columns: 5rem auto 5rem;
+
+         &__heading {
+            text-align: center;
+            width: 100%;
+         }
+
+         &__bio {}
       }
 
-      p {
-         font-size: 1.8rem;
-         line-height: 3rem;
+      .work {
+         padding: 5rem 0;
+         padding-bottom: 3rem;
       }
-   }
 
+      .work__projects {
+         display: grid;
+         grid-gap: 3rem;
+         grid-template-columns: 1fr 1fr;
+         padding-bottom: 3.5rem;
+         padding-top: 6rem;
+         justify-content: center;
+         margin: 0;
+      }
 
+      .work__projects .projects__item .projects__link {
+         margin-bottom: 0;
+      }
 
-   .contact__details {
-      width: 75%;
-   }
+      //----------------------- SKILLS -------------------------
+      .skills {
 
-   #container .about__bio .about__myself a {
-      margin-top: 2rem;
-      display: block;
+         .skills__grid {
+            column-gap: 2rem;
+            row-gap: 2rem;
+
+            justify-content: center;
+
+            .skills__grid-item {}
+
+            .text {
+               padding-bottom: 5rem;
+            }
+         }
+
+         .text {
+            // justify-self: center;
+         }
+
+         p {
+            font-size: 1.8rem;
+            line-height: 3rem;
+         }
+      }
+
+      .contact__details {
+         width: 75%;
+      }
+
+      #container .about__bio .about__myself a {
+         margin-top: 2rem;
+         display: block;
+      }
    }
 }
