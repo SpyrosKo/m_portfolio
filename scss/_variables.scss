@@ -2,6 +2,9 @@
 $hero-gradient:linear-gradient(202.1deg, #93A4FA 14.57%, rgba(108, 39, 39, 0.7) 81.83%);
 $pink-gradient: linear-gradient(180deg, #94A4FA 0%, #5E3A3A 100%);
 
+// Box-shadow
+$box-shadow: 2px 2px 2px 1px #c4c4c43d;
+
 // Header and paragraph Sizes
 $font-heading-1: 54px;
 $font-heading-2: 42px;
@@ -10,7 +13,7 @@ $font-heading-4: 26px; // ~44px line-height / 1000px-width
 $font-heading-5: 20px;
 $font-heading-6: 16px;
 
-$para: 19px;
+$para: 16px;
 
 // Background Colors
 $dark-background: #050517;
@@ -29,7 +32,7 @@ $cta-text: #050517;
 $transition-hover: all 0.2s;
 
 // Buttons
-$button: #0a556a;
+$button-color: #0a556a;
 
 // Fonts
 @font-face {
@@ -45,4 +48,18 @@ $button: #0a556a;
 @font-face {
    font-family: Josefin_Sans;
    src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+@mixin button {
+   background-color: $button-color;
+   box-shadow: $box-shadow;
+   border-radius: 5px;
+   padding: 0.8rem;
+   color: #d5ebe4;
+   display: inline-block;
+   font-size: 0.8rem;
+   font-weight: 900;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   transition: $transition-hover;
 }

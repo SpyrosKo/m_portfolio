@@ -9,9 +9,7 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-
    word-break: keep-all;
-
 }
 
 body {
@@ -35,6 +33,7 @@ img {
    display: block;
    height: auto;
    width: 100%;
+   box-shadow: $box-shadow;
 }
 
 h1,
@@ -51,19 +50,14 @@ p {
    font-size: $para;
 }
 
-
-a {
-   letter-spacing: 2px;
-}
-
-
 // ********************************************************
 // Header
 .header {
    background: $dark-font-color;
    padding: 1rem 5rem 1rem 3rem;
    width: 98vw;
-
+   position: sticky;
+   top: 0;
 
    .nav {
       display: flex;
@@ -130,7 +124,6 @@ a {
    }
 }
 
-
 // Hero
 .hero {
    background-color: $light-background;
@@ -140,8 +133,6 @@ a {
    grid-template-columns: 15vw auto 25vw;
    padding: 6rem 0;
    padding-top: 7rem;
-
-   // height: 100vh;
 
    &__headings {
       grid-column: 2;
@@ -172,36 +163,21 @@ a {
       grid-column: 2;
       grid-row: 2;
 
-
       .hero__myintro {
          font-size: $font-heading-4;
          font-weight: 400;
          line-height: 44px;
          padding: 2rem 0;
+         text-transform: capitalize;
       }
 
       .hero__cta {
-         background-color: $button;
-         border-radius: 100px;
-         color: #d5ebe4;
-         display: inline-block;
-         font-size: 1rem;
-         font-weight: 900;
-         height: 3rem;
-         letter-spacing: 3px;
-         line-height: 3rem;
-         padding: 0 0.5rem;
-         text-transform: uppercase;
-         transition: $transition-hover;
+         @include button;
 
-         &:hover {
-            // background-color: darken($button, 5%);
-            // box-shadow: 0 0 1px 20px hsla(345, 58%, 48%, 0.03);
-            // color: #fff;
-         }
+         &:hover {}
 
          &:active {
-            background-color: $button;
+            background-color: $button-color;
             color: #d5ebe4;
          }
       }
@@ -215,7 +191,6 @@ a {
    grid-template-columns: 14vw auto 15vw;
    padding: 7rem 0;
    text-align: right;
-
 
    h2.about__heading {
       color: $light-font-color;
@@ -264,13 +239,7 @@ a {
 .work {
    background: $light-font-color;
    background-color: #d5ebe4;
-   position: relative;
-   // background-size: cover;
-   // background-position: left bottom;   
-   //background-repeat: no-repeat;
-   // background-image: url(../img/Polygon1.svg);
-
-   padding: 7rem 0;
+   padding: 10rem 0;
    height: 100%;
 
    h2.work__heading {
@@ -279,85 +248,68 @@ a {
       letter-spacing: 1px;
       text-align: center;
       text-decoration: underline;
-      // text-decoration: overline;
+      padding-bottom: 5rem;
    }
 
    &__projects {
-      display: grid;
-      grid-gap: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      grid-template-columns: 1fr 1fr;
-      padding: 0 1.5rem;
-      justify-content: center;
-      padding-top: 5rem;
-      margin: 0 12vw;
-
-      .projects__item {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         text-align: center;
-
-         .link {
-            width: 100%;
-            height: 40px;
-            background-color: #9bb2d3;
-            border: 1px solid #e4e4e4;
-         }
-
-         a {
-            border-bottom: 1px solid $light-font-color;
-            color: #d5ebe4;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            width: 100%;
-         }
-
-         .projects__project {
-            background: #050517;
-            border-left: 1px solid $dark-font-color;
-            margin: .0.5rem 0;
-            margin-top: 0;
-            padding: 0.4rem;
-            transition: $transition-hover;
-
-            &:hover {
-               background: $light-font-color;
-               background-color: #d5ebe4;
-               color: $dark-font-color;
-            }
-         }
-
-         .projects__github {
-            background: #050517;
-            border-bottom: 1px solid $dark-font-color;
-            border-left: 1px solid $dark-font-color;
-            padding: 0.4rem;
+      .work__description {
+         .work__sections {
+            width: 90vw;
+            margin: auto;
             border-radius: 5px;
+            box-shadow: $box-shadow;
 
-            &:hover {
-               background: $light-font-color;
-               background-color: #d5ebe4;
-               color: $dark-font-color;
-               transition: $transition-hover;
+
+            .work__site {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 2rem;
+               align-items: flex-end;
+               justify-content: center;
+               margin: 1rem 0;
+               padding: 3.5rem 0.8rem;
+               background-color: aliceblue;
+               border-radius: inherit;
+
+               .projects__item {
+                  a {
+                     border-bottom: 1px solid $light-font-color;
+                     color: #d5ebe4;
+                     font-weight: bold;
+                     font-size: 1.1rem;
+                     text-transform: uppercase;
+                     width: 100%;
+                  }
+
+                  .projects__link {
+                     img {
+                        display: block;
+                        height: auto;
+                        max-width: 300px;
+                        min-width: 150px;
+                        border-radius: 5px;
+                     }
+                  }
+               }
             }
-         }
 
-         .projects__link {
-            transition: $transition-hover;
-            margin-bottom: 0.5rem;
-
-            img {
+            .work__card {
                display: block;
-               height: auto;
-               width: 100%;
-               border-radius: 5px;
+               width: 50ch;
+
+               h2 {
+                  line-height: 28px;
+                  margin-bottom: 1rem;
+               }
+
+               p {
+                  line-height: 26px;
+                  padding-bottom: 17px;
+               }
             }
 
-            &:hover {
-               opacity: 1;
-               transform: scale(1.1);
+            .button {
+               @include button;
             }
          }
       }
@@ -377,7 +329,7 @@ a {
 
 .skills {
    height: 100%;
-   padding: 5rem 15vw;
+   padding: 5rem 11vw;
    background-image: url(../img/skills-bg.svg);
    background-color: #050517;
 
@@ -387,24 +339,21 @@ a {
 
    &__grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 200px);
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
-         "  lang lang-img "
-         "  tech-img tech-text "
-         "  cms-text cms-img ";
-      justify-items: center;
+         "  . lang lang-img "
+         "  tech-img tech-text ."
+         " . cms-text cms-img ";
+      justify-content: center;
       align-items: center;
-      column-gap: 8rem;
-      row-gap: 6rem;
+      column-gap: 1rem;
+      row-gap: 0rem;
       font-family: Helvetica;
 
-
       .skills__grid-item {
-         // border: 1px solid gray;
          width: 100%;
          max-width: 200px;
-
       }
 
       img {
@@ -415,13 +364,11 @@ a {
       p {
          font-size: 26px;
          color: $light-background;
-
       }
 
       .text {
          line-height: 4rem;
          letter-spacing: 5px;
-
       }
 
       .languages {
@@ -461,10 +408,7 @@ h2.contact__heading {
    width: 100%;
 }
 
-.kwes-form {}
-
 .contact {
-
    &__details {
       display: flex;
       flex-direction: column;
@@ -475,6 +419,7 @@ h2.contact__heading {
       margin: auto;
       background: #fefefe;
       padding: 2rem;
+      border-radius: 5px;
 
       label {
          font-size: 0.7rem;
@@ -511,30 +456,17 @@ h2.contact__heading {
          height: 100%;
 
          .contact__submit {
-            background-color: $button;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            cursor: pointer;
+            @include button;
             display: block;
-            font-size: 1.2em;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin: 2rem auto;
-            margin-bottom: 4rem;
-            outline: none;
-            padding: 1rem;
-            text-transform: uppercase;
-            transition: $transition-hover;
-            width: max-content;
+            margin: auto;
 
             &:hover {
-               background-color: darken($button, 5%);
+               background-color: darken($button-color, 5%);
                color: #fff;
             }
 
             &:active {
-               background-color: $button;
+               background-color: $button-color;
                color: #d5ebe4;
             }
          }

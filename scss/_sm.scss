@@ -29,32 +29,16 @@
 
       // Work
 
-      .work {
-         &__projects {
-            display: grid;
-            grid-gap: 5rem;
-            grid-template-columns: 1fr;
-            padding: 5rem 3rem;
-            padding-top: 8rem;
-            justify-content: center;
-         }
-      }
+
 
       // Skills
 
       .skills {
-         grid-template-columns: 1fr;
-         grid-template-areas:
-            " lang-img"
-            "  lang "
-            "  tech-img "
-            " tech-text"
-            "  cms-img "
-            "cms-text ";
+         text-align: center;
+
+         &__grid {}
+
       }
 
-      .contact__details {
-         width: 100%;
-      }
    }
 }

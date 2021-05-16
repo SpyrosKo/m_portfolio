@@ -30,24 +30,10 @@
          &__bio {}
       }
 
-      .work {
-         padding: 5rem 0;
-         padding-bottom: 3rem;
+      .work__card {
+         text-align: center;
       }
 
-      .work__projects {
-         display: grid;
-         grid-gap: 3rem;
-         grid-template-columns: 1fr 1fr;
-         padding-bottom: 3.5rem;
-         padding-top: 6rem;
-         justify-content: center;
-         margin: 0;
-      }
-
-      .work__projects .projects__item .projects__link {
-         margin-bottom: 0;
-      }
 
       //----------------------- SKILLS -------------------------
       .skills {
@@ -55,6 +41,15 @@
          .skills__grid {
             column-gap: 2rem;
             row-gap: 2rem;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+               " lang-img"
+               "  lang "
+               "  tech-img "
+               " tech-text"
+               "  cms-img "
+               "cms-text ";
+            justify-items: center;
 
             justify-content: center;
 
@@ -75,13 +70,6 @@
          }
       }
 
-      .contact__details {
-         width: 75%;
-      }
 
-      #container .about__bio .about__myself a {
-         margin-top: 2rem;
-         display: block;
-      }
    }
 }
