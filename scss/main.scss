@@ -69,6 +69,7 @@ p {
             width: 50px;
             height: auto;
             display: block;
+            box-shadow: none;
          }
       }
 
@@ -168,7 +169,7 @@ p {
          font-weight: 400;
          line-height: 44px;
          padding: 2rem 0;
-         text-transform: capitalize;
+         text-transform: none;
       }
 
       .hero__cta {
@@ -200,6 +201,7 @@ p {
       width: 17ch;
       line-height: 3.6rem;
       justify-self: end;
+      text-decoration: underline;
    }
 
    &__bio {
@@ -239,7 +241,6 @@ p {
 .work {
    background: $light-font-color;
    background-color: #d5ebe4;
-   padding: 10rem 0;
    height: 100%;
 
    h2.work__heading {
@@ -248,7 +249,7 @@ p {
       letter-spacing: 1px;
       text-align: center;
       text-decoration: underline;
-      padding-bottom: 5rem;
+      padding: 5rem 0;
    }
 
    &__projects {
@@ -359,6 +360,7 @@ p {
       img {
          width: 80%;
          max-width: 300px;
+         box-shadow: none;
       }
 
       p {
@@ -398,54 +400,80 @@ p {
 }
 
 // Contact
-h2.contact__heading {
-   border-bottom: 1px solid $light-font-color;
-   border-top: 1px solid $light-font-color;
-   font-size: $font-heading-2;
-   margin: 5rem 0;
-   text-align: center;
-   word-spacing: 5px;
-   width: 100%;
+.kwes-form {
+   padding: 7rem 0;
 }
 
 .contact {
    &__details {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      max-width: 400px;
-      margin: auto;
       background: #fefefe;
       padding: 2rem;
       border-radius: 5px;
+      max-width: 670px;
+      margin: auto;
+      background-color: aliceblue;
+      color: $dark-font-color;
+
+      h2.contact__heading {
+         font-size: $font-heading-2;
+         padding: 2rem 0;
+         word-spacing: 5px;
+         width: 100%;
+      }
+
+      h3 {
+         color: #050517;
+         padding: 1rem;
+         text-transform: none;
+      }
 
       label {
-         font-size: 0.7rem;
+         font-size: 0.9rem;
          padding-bottom: 0.3rem;
          letter-spacing: 1px;
-         display: block;
+         text-decoration: underline !important;
       }
 
       input {
          margin-bottom: 1.5rem;
          display: block;
          padding: 0.3rem;
-         width: 350px;
+         border-bottom: 2px solid #050517 !important;
+         border-right: 1px solid transparent !important;
+         border-top: 1px solid transparent !important;
+         border-left: 2px solid #050517 !important;
+         width: 100%;
+         max-width: 670px;
+         height: 50px;
 
-         &::placeholder {}
+         &::placeholder {
+            color: hsla(240,
+                  64%,
+                  5%,
+                  0.369);
+         }
       }
 
       .subject {
-         width: 350px;
-         max-width: 350px;
-         min-width: 350px;
+         height: 100px !important;
          margin: 0.5rem 0 !important;
+         border-bottom: 2px solid #050517 !important;
+         border-right: 1px solid transparent !important;
+         border-top: 1px solid transparent !important;
+         border-left: 2px solid #050517 !important;
+         width: 100%;
+         max-width: 670px;
+
 
          &::placeholder {
             font-size: 1rem;
             padding: 0.5rem;
+            color: hsla(240,
+                  64%,
+                  5%,
+                  0.369);
          }
       }
    }
@@ -458,7 +486,7 @@ h2.contact__heading {
          .contact__submit {
             @include button;
             display: block;
-            margin: auto;
+            margin: 30px auto;
 
             &:hover {
                background-color: darken($button-color, 5%);
